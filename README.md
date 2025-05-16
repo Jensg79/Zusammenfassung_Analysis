@@ -13,7 +13,7 @@
 	       width= \linewidth]{%
 		\bfseries #1%
 	}%
-}```
+}
 ```\renewcommand{\subsubsection}[1]{%
 	\par\noindent
 	\tcbox[colback=yellow!20!white,
@@ -26,4 +26,4 @@
 	       width=\linewidth]{%
 		\bfseries #1%
 	}%
-}```
+}
