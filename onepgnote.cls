@@ -56,19 +56,28 @@ On that I will work later.]
 	}
 }
 \renewcommand{\subsection}[1]{%
-	\vspace{4pt}%
-	\tcbox[colback=blue!10!white, colframe=blue!40!black,
-	       boxrule=0.8pt, sharp corners, left=2pt, right=2pt,
-	       top=2pt, bottom=2pt, width= \linewidth, 
-	       before skip=2pt, after skip=2pt]{%
+	\par\noindent
+	\tcbox[colback=red!10!white,
+	       colframe=cyan!40!black,
+	       boxrule=0.4pt,
+	       sharp corners,
+	       left=2pt, right=2pt, top=1pt, bottom=1pt,
+	       nobeforeafter,
+	       box align=base,
+	       width= \linewidth]{%
 		\bfseries #1%
 	}%
 }
 \renewcommand{\subsubsection}[1]{%
-	\vspace{2pt}%
-	\tcbox[colback=red!15!white, colframe=gray!40,
-	       boxrule=0.5pt, sharp corners, left=2pt, right=2pt,
-	       top=1pt, bottom=1pt, width= \linewidth]{%
+	\par\noindent
+	\tcbox[colback=yellow!20!white,
+	       colframe=gray!50,
+	       boxrule=0.3pt,
+	       sharp corners,
+	       left=2pt, right=2pt, top=1pt, bottom=1pt,
+	       nobeforeafter,
+	       box align=base,
+	       width=\linewidth]{%
 		\bfseries #1%
 	}%
 }
