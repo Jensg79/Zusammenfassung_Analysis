@@ -2,8 +2,8 @@
 ### Paket onepgnote wurde so verändert, dass subsection und subsubsection farbig hinterlegt werden
 ### Renewcommand
 
-
-``` \renewcommand{\subsection}[1]{%
+``` 
+\renewcommand{\subsection}[1]{%
 	\par\noindent
 	\tcbox[colback=red!10!white,
 	       colframe=cyan!40!black,
