@@ -8,7 +8,7 @@
 \usepackage{pifont}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
-
+\usepackage[a]{esvect}
 %%%%%%%%%%%%ToDo
 \usepackage{xargs}  
 \usepackage[dvipsnames]{xcolor}
@@ -23,8 +23,8 @@
 
 %%%%%%%%%%%%%
 \usepackage{draftwatermark}
-\SetWatermarkText{© Gymnasium Gröbenzell}
-\SetWatermarkScale{0.4}
+\SetWatermarkText{© FS Mathematik Gymnasium Gröbenzell}
+\SetWatermarkScale{0.3}
 \SetWatermarkColor[gray]{0.85}
 
 %%%%
@@ -588,11 +588,90 @@ Bei der Kurvendiskussion werden Eigenschaften des Graphen $G_f$ einer Funktion $
 \item Kugel $\longrightarrow V_{\text{Kugel}} = \frac{4}{3} \cdot \pi \cdot r^3$ und der Oberflächeninhalt $A_O = 4\cdot \pi \cdot r^2$
 \end{enumerate}
 \end{itemize}
-\subsection{Vektoren}
+\subsection{Definition von Vektoren}
 \begin{itemize}
     \item Vektoren sind Pfeile im zwei - bzw. dreidimensionalen Raum
     \item Jeder Vektor ist ein Repräsentant unendlich vieler, gleich langer, gleich gerichteter und paralleler Pfeile
-  
+    \item Vektoren werden häufig durch kleine Buchstaben und einem Pfeil darüber gekennzeichnet $\vv{a}$
+    \item Verläuft ein Repräsentant eines Vektors von einem Punkt z.B. $P$ zu einem zweiten Punkt z.B. $Q$, so bezeichnet man alle Repräsentanten mit $\vv{PQ}$.
+    \item Werden mehrere Vektoren addiert so werden die jeweiligen Repräsentanten aneinandergereiht und das Ergebnis nennt man dann Vektorkette.
+    \item Ein Vektor im 2- bzw. 3-dim. Raum wird in der Spaltenschreibweise durch 2 bzw. 3 Koordinaten beschrieben $\vv{a}= \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix}$
+    \item Der Vektor \textcolor{red}{ $\vv{0A} = \vv{A}$} bezeichnet denjenigen Vektor, der im Ursprung $0$ beginnt um im Punkt $A$ endet. Er wird als \textcolor{red}{Ortsvektor} bezeichnet.
+\end{itemize}
+\subsection{Eigenschaften von Vektoren}
+\begin{itemize}
+\item Vektoraddition\\
+\begin{enumerate}
+\item $\vv{a} +\vv{b} = \vv{b} + \vv{a}$\\
+\item $\left( \vv{a}+\vv{b}\right)+\vv{c} = \vv{a} +\left(\vv{b} +\vv{c}\right)$
+\end{enumerate}
+\item Nullvektor\\
+\begin{enumerate}
+\item $\vv{0} +\vv{a} = \vv{a}$ \item Der Vektor $\vv{0}$ hat die Länge $0$
+\end{enumerate}
+\item Gegenvektor\\
+\begin{enumerate}
+\item Der Vektor $-\vv{a}$ ist der Gegenvektor zu $\vv{a}$\\
+\item $-\vv{a}$ ist genauso lang wir $\vv{a}$ und  zu $\vv{a}$ entgegengerichtet
+\end{enumerate}
+\item skalare Multiplikation\\
+\begin{enumerate}
+\item $\lambda \cdot \vv{a} = \lambda \cdot \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} = \begin{pmatrix} \lambda \cdot a_1 \\ \lambda \cdot a_2 \\ \lambda \cdot a_3 \end{pmatrix}$\\
+\item Die skalare Multiplikation vervielfacht den Vektor durch den skalar $\lambda \in \mathds{R}$\\
+\item Der Vektor $\lambda\cdot \vv{a}$ ist $| \lambda |-$ mal so lang wie der Vektor $\vv{a}$\\
+\item Für $\lambda > 0$ hat er die gleiche Richtung wie $\vv{a}$ \\
+\item Für $\lambda < 0$ hat er die entgegengesetzte Richtung wie $\vv{a}$
+\end{enumerate}
+\item Rechengesetze\\
+\begin{enumerate}
+\item Assoziativgesetz: $\lambda \cdot  \left(\mu \cdot \vv{a}\right) = \left(\lambda\cdot\mu\right)\cdot \vv{a}$\\
+\item Distibutivgesetz:\\ \hspace*{0.5cm} $\lambda \cdot \left(\vv{a} + \vv{b}\right) = \lambda \cdot \vv{a}+ \lambda \cdot \vv{b}$\\ \hspace*{0.5cm} $\left(\lambda + \mu \right)\cdot \vv{a} = \lambda \cdot \vv{a} + \mu \cdot \vv{b}$
+\end{enumerate}
+\item Der Verbindungsvektor $\vv{PQ}$ wird durch $\vv{PQ} = \vv{Q} - \vv{P}$ bestimmt.\\ \mynote "Spitze minus Hacke"
+\item Der Mittelpunkt $M$ einer Strecke $AB$ wird durch \\$\vv{M} = \frac{1}{2}\cdot \left(\vv{A} + \vv{B}\right)$ bestimmt 
+\end{itemize}
+\subsection{Beispiel für Vektorketten}\\
+\scalebox{0.8}{\begin{tikzpicture}[font=\boldmath]\large
+    % Punkte
+    \coordinate (A) at (0,0) {};
+     \draw[blue] (-0.35,-0.35)   node [above] {A};
+    \coordinate (B) at (4,0) {};
+    \draw[blue] (4.5,-0.35)   node [above] {B};
+    \coordinate (C) at (6,2) {};
+    \draw[blue] (6.35,2)   node [above] {C};
+    \coordinate (D) at (2,2) {};
+    \draw[blue] (2.3,2)   node [above] {D};
+    \coordinate (E) at (3,5) {};
+    \draw[blue] (3.35,5)   node [above] {S};
+    \coordinate (G) at (4.5,3.5) {};
+    \draw[blue] (4.8,3.5)   node [above] {N};
+    \coordinate (H) at (3.5,2.5) {};
+    \draw[blue] (3.2,2.3)   node [above] {M};
+    \draw[->, red]  (A) -- (B) node[sloped,midway,above] {$\vv{a}$};
+    \draw[->,green, very thick]  (B) -- (C) node[sloped,midway,above] {$\vv{BC}$};
+    \draw  (C) -- (D) node[] {};
+    \draw[->,red]  (A) -- (D) node[sloped,above,very near end] {$\vv{b}$};
+   \draw[->,red]  (A) -- (E) node[sloped,midway,above] {$\vv{c}$};
+   \draw[->,green, very thick]  (H) -- (B) node[sloped,below, near start] {$-\frac{1}{2}\vv{BS}$};
+   \draw[->,green, very thick]  (C) -- (G) node[sloped,above, midway,] {$\frac{1}{2}\vv{CS}$};
+   \draw  (E) -- (B) node[] {};
+   \draw  (E) -- (C) node[] {};
+   \draw  (E) -- (D) node[] {};
+   \draw[dashed]  (A) -- (C) node[] {};
+   \draw[dashed]  (B) -- (D) node[] {};
+    \draw[dashed]  (G) -- (H) node[] {};
+\end{tikzpicture} }
+\begin{itemize}
+\item Drücke den Vektor $\vv{MN}$ mithilfe der Vektoren $\vv{a}, \vv{b}$ und $\vv{c}$ aus.
+     \begin{equation*}
+            \begin{split}
+                \vv{MN} &= - \dfrac{1}{2}\vv{BS} + \vv{BC} + \dfrac{1}{2} \vv{CS}\\
+                &= -\dfrac{1}{2} \left( \vv{c} - \vv{a}\right) +\vv{b} + \dfrac{1}{2} \left(\vv{c} - \vv{a} -\vv{b}\right)\\
+                &= -\dfrac{1}{2} \vv{c} +\dfrac{1}{2} \vv{a} +\vv{b} + \dfrac{1}{2} \vv{c} - \dfrac{1}{2}\vv{a} -\dfrac{1}{2}\vv{b}\\
+                &= \dfrac{1}{2} \vv{b}
+            \end{split}
+        \end{equation*} 
+        Damit folgt, das die Mittellinie $\overline{MN}$ parallel, gleichgerichtet aber nur halb so lang wie der Vektor $\vv{b}$ ist.
 \end{itemize}
 %\unsure[inline]{Definition von Vektoren!} 
 \end{document}22
