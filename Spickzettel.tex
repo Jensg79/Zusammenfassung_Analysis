@@ -1,7 +1,7 @@
 \documentclass[a4paper,twocolumn,10pt]{onepgnote1}
 \usepackage{fontspec} % WICHTIG FÜR LuaLaTeX!
 \setmainfont{Latin Modern Roman} % oder eine andere Systemschriftart
-\usepackage{dsfont, amsmath}
+\usepackage{dsfont, amsmath,amssymb}
 \usepackage[margin=10pt]{geometry}
 \usepackage{yhmath}
 \usepackage{tikz}
@@ -228,7 +228,7 @@ Wir erhalten aus dem Graphen $G_f$ der Funktion f den Graphen der Funktion g mit
 \begin{enumerate}\item z $<$ n: die $x-$Achse ist waagerechte Asymptote $\lim\limits_{x\longrightarrow \infty} f(x) = \lim\limits_{x\longrightarrow -\infty} f(x) = 0$\\
 \item  z $=$ n: waagerechte Asymptote die parallel zur x-Achse verläuft $\lim\limits_{x\longrightarrow \infty} f(x) = \lim\limits_{x\longrightarrow -\infty} f(x) = a \in\mathds{R}$\\
 \item z $=$ n+1: schräge Asymptote die direkt aus der Summenform ablesbar ist \\
-\mynote $f(x) =\underbrace{x+1}_{\text{Gleichung der \textcolor{red}{schrägen} Asymptote}} +\dfrac{1}{x^2}$\\
+\mynote $f(x) =\underbrace{x+1}_{\text{Gleichung der \textcolor{red}{schrägen} Asymptote}} +\dfrac{2}{x-1}$\\
 \item z $>$ n +1: Näherungskurve
 \end{enumerate}
  \end{itemize}
@@ -627,8 +627,14 @@ Bei der Kurvendiskussion werden Eigenschaften des Graphen $G_f$ einer Funktion $
 \item Assoziativgesetz: $\lambda \cdot  \left(\mu \cdot \vv{a}\right) = \left(\lambda\cdot\mu\right)\cdot \vv{a}$\\
 \item Distibutivgesetz:\\ \hspace*{0.5cm} $\lambda \cdot \left(\vv{a} + \vv{b}\right) = \lambda \cdot \vv{a}+ \lambda \cdot \vv{b}$\\ \hspace*{0.5cm} $\left(\lambda + \mu \right)\cdot \vv{a} = \lambda \cdot \vv{a} + \mu \cdot \vv{b}$
 \end{enumerate}
-\item Der Verbindungsvektor $\vv{PQ}$ wird durch $\vv{PQ} = \vv{Q} - \vv{P}$ bestimmt.\\ \mynote "Spitze minus Hacke"
-\item Der Mittelpunkt $M$ einer Strecke $AB$ wird durch \\$\vv{M} = \frac{1}{2}\cdot \left(\vv{A} + \vv{B}\right)$ bestimmt 
+\end{itemize}
+\subsection{Rechnungen mit Vektoren}
+\begin{itemize}
+\item Der Verbindungsvektor $\vv{PQ}$ \\ $\vv{PQ} = \vv{Q} - \vv{P} = \begin{pmatrix} q_1 \\ q_2 \\ q_3 \end{pmatrix} - \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} = \begin{pmatrix} q_1 - p_1\\ q_2 - p_2\\ q_3 - p_3\end{pmatrix}$ \\ \mynote "Spitze minus Hacke"
+\item Summe von Vektoren $\vv{A} +\vv{B} =  \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} + \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix} = \begin{pmatrix} a_1 + b_1\\ a_2 + b_2\\ a_3 + b_3\end{pmatrix}$
+\item Der Mittelpunkt der Strecke $\overline{AB}$  \\$ \longrightarrow \vv{M} = \frac{1}{2}\cdot \left(\vv{A} + \vv{B}\right)$ bestimmt 
+\item Schwerpunkt des Dreiecks $\triangle ABC $\\ $\longrightarrow \vv{S}_{\text{Dreieck}} = \frac{1}{3} \left(\vv{A} + \vv{B} +\vv{C}\right)$
+\item Schwerpunkt einer Pyramide $ABCS$ \\ $\longrightarrow \vv{S}_{\text{Pyramide}}= \frac{1}{4} \left(\vv{A} + \vv{B} +\vv{C} +\vv{S}\right)$
 \end{itemize}
 \subsection{Beispiel für Vektorketten}\\
 \scalebox{0.8}{\begin{tikzpicture}[font=\boldmath]\large
@@ -660,9 +666,8 @@ Bei der Kurvendiskussion werden Eigenschaften des Graphen $G_f$ einer Funktion $
    \draw[dashed]  (A) -- (C) node[] {};
    \draw[dashed]  (B) -- (D) node[] {};
     \draw[dashed]  (G) -- (H) node[] {};
-\end{tikzpicture} }
-\begin{itemize}
-\item Drücke den Vektor $\vv{MN}$ mithilfe der Vektoren $\vv{a}, \vv{b}$ und $\vv{c}$ aus.
+\end{tikzpicture} }\\
+ Der Vektor $\vv{MN}$ wird mithilfe der Vektoren $\vv{a}, \vv{b}$ und $\vv{c}$ ausgedrückt.
      \begin{equation*}
             \begin{split}
                 \vv{MN} &= - \dfrac{1}{2}\vv{BS} + \vv{BC} + \dfrac{1}{2} \vv{CS}\\
@@ -672,6 +677,37 @@ Bei der Kurvendiskussion werden Eigenschaften des Graphen $G_f$ einer Funktion $
             \end{split}
         \end{equation*} 
         Damit folgt, das die Mittellinie $\overline{MN}$ parallel, gleichgerichtet aber nur halb so lang wie der Vektor $\vv{b}$ ist.
+\subsection{Operationen mit Vektoren}
+\begin{itemize}
+\item Länge eines Vektors $\longrightarrow |\vv{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}$
+\item Skalare Multiplikation $\longrightarrow \vv{b} = \lambda \cdot \vv{a} $
+\item Skalarprodukt $\longrightarrow \vv{a}\circ \vv{b} = a_1\cdot b_1 + a_2\cdot b_2 + a_3\cdot b_3 \in \mathds{R}$
+\item Vektorprodukt $\longrightarrow$  $$\vv{c} = \vv{a} \times \vv{b} = \begin{pmatrix} a_1 \\a_2\\a_3\end{pmatrix} \times \begin{pmatrix} b_1 \\b_2\\b_3\end{pmatrix} = \begin{pmatrix} a_2\cdot b_3 - a_3\cdot b_2 \\a_3\cdot b_1 - a_1\cdot b_3\\a_1\cdot b_2 - a_2\cdot b_1\end{pmatrix}$$
 \end{itemize}
-%\unsure[inline]{Definition von Vektoren!} 
-\end{document}22
+\subsection{Eigenschaften der Operationen}
+\begin{itemize}
+\item Länge\\
+\begin{enumerate}
+\item $|\vv{A}| \longrightarrow$ Abstand des Punktes $A$ vom Urpsrung\\
+\item $|\vv{PQ}| \longrightarrow$ Abstand des beiden Punkte $P$ und $Q$
+\end{enumerate}
+\item skalare Multiplikation\\
+\begin{enumerate}
+\item $\lambda \vv{a} \longrightarrow$ Längenänderung von $\vv{a}$\\
+\item $\vv{a}^{\ast} = \frac{1}{|\vv{a}|} \cdot \vv{a} \longrightarrow |\vv{a}^{\ast}| = 1$
+\end{enumerate}
+\item Skalarprodukt\\
+\begin{enumerate}
+\item $\vv{a}\circ \vv{b} = 0  \curvearrowright \vv{a}\perp \vv{b}$\\
+\item Winkel zwischen zwei Vektoren $\vv{a}$ und $\vv{b}$\\ $\longrightarrow \cos{(\varphi)} = \frac{\vv{a} \circ \vv{b}}{|\vv{a}| \cdot |\vv{b}|} \curvearrowright \varphi = \cos^{-1}{\left(\frac{\vv{a} \circ \vv{b}}{|\vv{a}| \cdot |\vv{b}|}\right)} $
+\end{enumerate}
+\item Vektorprodukt\\
+\begin{enumerate}
+\item $\vv{a} \times \vv{b} = \vv{c}$\\
+\item $\vv{a} \perp \vv{c}$ und $\vv{b} \perp \vv{c}$ \\
+\item Flächeninhalt $\triangle ABC \longrightarrow A_{\text{Dreieck}} = \frac{1}{2} \cdot | \vv{a}\times \vv{b}|$\\
+\item Flächeninhalt Parallelogramm $\longrightarrow A_{\text{P}} = |\vv{a} \times \vv{b}|$
+\end{enumerate}
+\end{itemize}
+\unsure[inline]{Definition von Spatprodukt; Eigenschaften Spatprodukt} 
+\end{document}
