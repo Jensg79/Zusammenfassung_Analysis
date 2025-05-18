@@ -1,4 +1,4 @@
-\documentclass[a4paper,twocolumn,10pt]{onepgnote}
+\documentclass[a4paper,twocolumn,10pt]{onepgnote1}
 \usepackage{fontspec} % WICHTIG FÜR LuaLaTeX!
 \setmainfont{Latin Modern Roman} % oder eine andere Systemschriftart
 \usepackage{dsfont, amsmath}
@@ -8,6 +8,22 @@
 \usepackage{pifont}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
+
+%%%%%%%%%%%%ToDo
+\usepackage{xargs}  
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Red!55,bordercolor=Red,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+\newcounter{todocounter}  \newcommandx{\todocount}[2][1=]{\stepcounter{todocounter}\todo[linecolor=YellowGreen,backgroundcolor=YellowGreen!25,bordercolor=YellowGreen,#1]{\thetodocounter: #2}}
+
+%%%%%%%%%%%%%
+
+
 \usepackage{tcolorbox}
 
 \renewtcbox{\notebox}{%
@@ -99,7 +115,7 @@ Wir erhalten aus dem Graphen $G_f$ der Funktion f den Graphen der Funktion g mit
 \item $f'(x_0) = m$\\
 \item $\tan{(\alpha)} = m \longrightarrow \alpha = \tan^{-1}{(m)}$
 \end{enumerate}
-\item Gleichung der Tangente $y_T$ durch den Punkt $P(x_0|f(x_0)) \\y_T = f'(x_0)\cdot(x-x_0) + f(x_0) $
+\item Tangentengleichung $y_T$ durch den Punkt $P(x_0|f(x_0)) \in G_f \\y_T = f'(x_0)\cdot(x-x_0) + f(x_0) $
 \end{itemize}
 \subsection{Grenzwerte spezieller Funktionen:}
 \begin{itemize}
@@ -206,10 +222,10 @@ Wir erhalten aus dem Graphen $G_f$ der Funktion f den Graphen der Funktion g mit
 \item Asymptoten: Die Art der Asymptote einer gebrochen-rationalen Funktion $f(x)=\frac{z(x)}{n(x)}$ mit $\mathds{D} = \mathds{D}_{\text{max}}$ hängt vom Grad der Polynome des Zählers  als auch des Nenners ab\footnote{z-Grad des Zählers; n - Grad des Nenners}.\\
 \begin{enumerate}\item z $<$ n: die $x-$Achse ist waagerechte Asymptote $\lim\limits_{x\longrightarrow \infty} f(x) = \lim\limits_{x\longrightarrow -\infty} f(x) = 0$\\
 \item  z $=$ n: waagerechte Asymptote die parallel zur x-Achse verläuft $\lim\limits_{x\longrightarrow \infty} f(x) = \lim\limits_{x\longrightarrow -\infty} f(x) = a \in\mathds{R}$\\
-\item z $=$ n+1: schräge Asymptote die direkt aus der Summenform ablesbar ist\\
+\item z $=$ n+1: schräge Asymptote die direkt aus der Summenform ablesbar ist \\
+\mynote $f(x) =\underbrace{x+1}_{\text{Gleichung der \textcolor{red}{schrägen} Asymptote}} +\dfrac{1}{x^2}$\\
 \item z $>$ n +1: Näherungskurve
-\end{enumerate}\\
-
+\end{enumerate}
  \end{itemize}
  \subsubsection{$e-$Funktion:}
  \begin{itemize}
@@ -236,8 +252,8 @@ Wir erhalten aus dem Graphen $G_f$ der Funktion f den Graphen der Funktion g mit
 \item $\lim \limits_{x\longrightarrow -\infty} f(x) = 0$\\
 \item $\lim \limits_{x\longrightarrow \infty} f(x) = \infty$
 \end{enumerate}
-\item $f(x) > 0: $ für alle $x\in \mathds{R}$
-\mynote Die $e-$Funktion wächst schneller als jede Potenzfunktion $g(x)= x^n$ mit $n\in\mathds{N}$
+\item $f(x) > 0: $ für alle $x\in \mathds{R}$\\
+\mynote Die $e-$Funktion wächst schneller als jede Potenzfunktion $g(x)= x^n$ mit $n\in\mathds{N}$\\ \mynote Eselsbrücke: $e$ \textcolor{red}{gewinnt}!
 \item Bei der Kurvendiskussion wird die $e-$Funktion meistens als Produkt mit einer anderen Funktion betrachtet.\footnote{$f(x) = g(x)\cdot e^{h(x)}  \longrightarrow f'(x) =g'(x)\cdot e^{h(x)} + g(x) \cdot h'(x) \cdot e^{h(x)} $}
  \end{itemize}
  \subsubsection{$ln-$Funktion:}
@@ -266,7 +282,7 @@ Wir erhalten aus dem Graphen $G_f$ der Funktion f den Graphen der Funktion g mit
 \item $\lim \limits_{x\longrightarrow 0^+} f(x) = -\infty$\\
 \item $\lim \limits_{x\longrightarrow \infty} f(x) = \infty$
 \end{enumerate}
-\item \mynote Die $ln-$Funktion wächst langsamer als jede Potenzfunktion $g(x)= x^n$ mit $n\in\mathds{N}$
+\item \mynote Die $ln-$Funktion wächst langsamer als jede Potenzfunktion $g(x)= x^n$ mit $n\in\mathds{N}$,\\ \mynote Eselsbrücke: $\ln$ ist der \textcolor{red}{Loser}!
 \item Bei der Kurvendiskussion wird die $ln-$Funktion meistens in Kombination mit einer anderen Funktion betrachtet.\footnote{$f(x) = \ln{(g(x))}  \longrightarrow f'(x) = \dfrac{1}{ g(x)} \cdot g'(x) = \dfrac{g'(x)}{g(x)} $}
  \end{itemize}
  \subsubsection{Wurzelfunktion:}
@@ -428,6 +444,8 @@ Bei der Kurvendiskussion werden Eigenschaften des Graphen $G_f$ einer Funktion $
     $G_f$ & smw & $HoP$ & smf & $TiP$& smw\\
     \hline
 \end{tabular}}
+\item wenn sich das Monotonieverhalten \textcolor{red}{nicht} ändert, liegt ein \textcolor{red}{Terrassenpunkt} vor 
+\item Bei gebrochen-rationalen Funktionen \textcolor{red} {muss die Definitionslücke in der Monotonietabelle ebenfalls betrachtet werden}.
  \end{itemize}
  \subsubsection{Krümmungsverhalten:}
  \begin{itemize}
@@ -544,12 +562,13 @@ Bei der Kurvendiskussion werden Eigenschaften des Graphen $G_f$ einer Funktion $
 \end{tikzpicture}}
 \end{itemize}
 \subsection{Platz für eigene Notizen:}
-\kariert{Notizen:}{10}{15}
+\kariert{Notizen:}{10}{13}
 \section{Analytische Geometrie}
 \subsection{Vektoren}
 \begin{itemize}
     \item Vektoren sind Pfeile im zwei - bzw. dreidimensionalen Raum
     \item Jeder Vektor ist ein Repräsentant unendlich vieler, gleich langer, gleich gerichteter und paralleler Pfeile
-    
+  
 \end{itemize}
-\end{document}
+%\unsure[inline]{Definition von Vektoren!} 
+\end{document}22

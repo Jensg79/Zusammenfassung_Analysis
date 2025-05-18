@@ -29,3 +29,7 @@
 		\bfseries #1%
 	}%
 }
+
+### ToDo funktioniert, allerdings nur in der inline Variante nutzbar da kein Platz am Rand des Dokuments
+
+### 
