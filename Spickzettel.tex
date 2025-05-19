@@ -809,14 +809,14 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
   \draw[] (C) -- (A) -- (S) -- cycle;
 
   % Vektoren einzeichnen
-  \draw[->,blue, thick] (A) -- (B) node[sloped,midway, below] {$\vec{AB}$};
-  \draw[->,blue, thick] (A) -- (C) node[sloped,very near end, below] {$\vec{AC}$};
-  \draw[->,blue, thick] (A) -- (S) node[sloped,midway, above] {$\vec{AS}$};
+  \draw[->,blue, very thick] (A) -- (B) node[sloped,midway, below] {$\vec{AB}$};
+  \draw[->,blue, very thick] (A) -- (C) node[sloped,very near end, above] {$\vec{AC}$};
+  \draw[->,blue, very thick] (A) -- (S) node[sloped,midway, above, thick] {$\vec{AS}$};
 
   % Punkte beschriften
   \draw[red] (A) node[below left] {A};
   \draw[red] (B) node[below right] {B};
-  \draw[red] (C) node[left] {C};
+  \draw[red] (C) node[right] {C};
   \draw[red] (S) node[above] {S};
 
  \end{scope}
