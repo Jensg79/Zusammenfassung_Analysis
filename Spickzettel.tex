@@ -5,6 +5,7 @@
 \usepackage[margin=10pt]{geometry}
 \usepackage{yhmath}
 \usepackage{tikz}
+\usetikzlibrary{calc}
 \usepackage{pifont}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
@@ -714,8 +715,84 @@ Bei der Kurvendiskussion werden Eigenschaften des Graphen $G_f$ einer Funktion $
 \end{enumerate}
 \item Spatprodukt $\longrightarrow$ bestimmt ein Volumen\\
 \begin{enumerate}
-    \item Volumen eines Spates $\longrightarrow V_{\text{Spat}} = |\left(\vv{AB} \times \vv{AC} \right)\circ\vv{AD}|$\\
-    \item Volumen einer dreiseitigen Pyramide\\ $ \longrightarrow V_{\text{Pyramide}}= |\frac{1}{6}\cdot \left(\vv{AB} \times \vv{AC} \right)\circ\vv{AD}| $
+    \item Volumen eines Spates $\longrightarrow V_{\text{Spat}} = |\left(\vv{AB} \times \vv{AD} \right)\circ\vv{AE}|$\\
+    \scalebox{0.8}{\begin{tikzpicture}
+ \begin{scope}[
+    x={(4cm,0cm)},
+    y={({cos(30)*1.5cm},{sin(30)*1.5cm})},
+    z={({cos(70)*2cm},{sin(70)*2cm})},
+    line join=round,fill opacity=0.5,thick]
+
+  % Ecken definieren
+  \coordinate (A) at (0,0,0);
+  \coordinate (B) at (1,0,0);
+  \coordinate (C) at (1,1,0);
+  \coordinate (D) at (0,1,0);
+  \coordinate (E) at (0,0,1);
+  \coordinate (F) at (1,0,1);
+  \coordinate (G) at (1,1,1);
+  \coordinate (H) at (0,1,1);
+%Vektoren zeichnen
+\draw[->,blue]  (A) -- (B) node[sloped,above,midway] {$\vv{AB}$};
+\draw[->,blue]  (A) -- (D) node[sloped,above,midway] {$\vv{AD}$};
+\draw[->,blue]  (A) -- (E) node[sloped,above,midway] {$\vv{AE}$};
+  % Flächen zeichnen
+  \draw[] (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw[] (D) -- (C) -- (G) -- (H) -- cycle;
+  \draw[] (B) -- (F) -- (G) -- (C) -- cycle;
+  \draw[] (A) -- (E) -- (F) -- (B) -- cycle;
+  \draw[] (A) -- (D) -- (H) -- (E) -- cycle;
+  \draw[] (E) -- (F) -- (G) -- (H) -- cycle;
+
+  % Punkte beschriften
+  \foreach \name/\pos in {
+    A/below left,
+    B/below right,
+    C/right,
+    D/left,
+    E/above left,
+    F/above right,
+    G/right,
+    H/above}
+    \draw[red] (\name) node[\pos] {\name};
+
+ \end{scope}
+\end{tikzpicture}}\\
+    \item Volumen einer dreiseitigen Pyramide\\ $ \longrightarrow V_{\text{Pyramide}}= |\frac{1}{6}\cdot \left(\vv{AB} \times \vv{AC} \right)\circ\vv{AS}| $\\
+    \scalebox{0.9}{%
+\begin{tikzpicture}
+ \begin{scope}[
+    x={(4cm,0cm)},
+    y={({cos(30)*1.5cm},{sin(30)*1.5cm})},
+    z={({cos(70)*2cm},{sin(70)*2cm})},
+    line join=round, fill opacity=0.5, thick]
+
+  % Eckpunkte definieren
+  \coordinate (A) at (0,0,0);    % Basisdreieck
+  \coordinate (B) at (1,0,0);
+  \coordinate (C) at (0,1,0);
+  \coordinate (S) at (0,1,1); % Spitze
+
+  % Flächen der Pyramide
+  \draw[] (A) -- (B) -- (C) -- cycle; % Basis
+  \draw[] (A) -- (B) -- (S) -- cycle;
+  \draw[] (B) -- (C) -- (S) -- cycle;
+  \draw[] (C) -- (A) -- (S) -- cycle;
+
+  % Vektoren einzeichnen
+  \draw[->,blue, thick] (A) -- (B) node[sloped,midway, below] {$\vec{AB}$};
+  \draw[->,blue, thick] (A) -- (C) node[sloped,very near end, below] {$\vec{AC}$};
+  \draw[->,blue, thick] (A) -- (S) node[sloped,midway, above] {$\vec{AS}$};
+
+  % Punkte beschriften
+  \draw[red] (A) node[below left] {A};
+  \draw[red] (B) node[below right] {B};
+  \draw[red] (C) node[left] {C};
+  \draw[red] (S) node[above] {S};
+
+ \end{scope}
+\end{tikzpicture}%
+}
 \end{enumerate}
 \end{itemize}
 \unsure[inline]{Bild eines Spats; Eigenschaften Spatprodukt} 
