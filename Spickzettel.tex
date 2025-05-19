@@ -25,7 +25,7 @@
 \usepackage{draftwatermark}
 \SetWatermarkText{© FS Mathematik Gymnasium Gröbenzell}
 \SetWatermarkScale{0.3}
-\SetWatermarkColor[gray]{0.85}
+\SetWatermarkColor[gray]{0.65}
 
 %%%%
 
@@ -683,6 +683,10 @@ Bei der Kurvendiskussion werden Eigenschaften des Graphen $G_f$ einer Funktion $
 \item Skalare Multiplikation $\longrightarrow \vv{b} = \lambda \cdot \vv{a} $
 \item Skalarprodukt $\longrightarrow \vv{a}\circ \vv{b} = a_1\cdot b_1 + a_2\cdot b_2 + a_3\cdot b_3 \in \mathds{R}$
 \item Vektorprodukt $\longrightarrow$  $$\vv{c} = \vv{a} \times \vv{b} = \begin{pmatrix} a_1 \\a_2\\a_3\end{pmatrix} \times \begin{pmatrix} b_1 \\b_2\\b_3\end{pmatrix} = \begin{pmatrix} a_2\cdot b_3 - a_3\cdot b_2 \\a_3\cdot b_1 - a_1\cdot b_3\\a_1\cdot b_2 - a_2\cdot b_1\end{pmatrix}$$
+\item Spatprodukt $\longrightarrow$ Verknüpfung von Vektorprodukt und Skalarprodukt\\
+\begin{enumerate}
+    \item $d = \left(\vv{a} \times\vv{b}\right) \circ\vv{c} \in \mathds{R}$
+\end{enumerate}
 \end{itemize}
 \subsection{Eigenschaften der Operationen}
 \begin{itemize}
@@ -708,6 +712,11 @@ Bei der Kurvendiskussion werden Eigenschaften des Graphen $G_f$ einer Funktion $
 \item Flächeninhalt $\triangle ABC \longrightarrow A_{\text{Dreieck}} = \frac{1}{2} \cdot | \vv{a}\times \vv{b}|$\\
 \item Flächeninhalt Parallelogramm $\longrightarrow A_{\text{P}} = |\vv{a} \times \vv{b}|$
 \end{enumerate}
+\item Spatprodukt $\longrightarrow$ bestimmt ein Volumen\\
+\begin{enumerate}
+    \item Volumen eines Spates $\longrightarrow V_{\text{Spat}} = |\left(\vv{AB} \times \vv{AC} \right)\circ\vv{AD}|$\\
+    \item Volumen einer dreiseitigen Pyramide\\ $ \longrightarrow V_{\text{Pyramide}}= |\frac{1}{6}\cdot \left(\vv{AB} \times \vv{AC} \right)\circ\vv{AD}| $
+\end{enumerate}
 \end{itemize}
-\unsure[inline]{Definition von Spatprodukt; Eigenschaften Spatprodukt} 
+\unsure[inline]{Bild eines Spats; Eigenschaften Spatprodukt} 
 \end{document}
