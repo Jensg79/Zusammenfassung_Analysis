@@ -1,57 +1,52 @@
 \documentclass[a4paper,twocolumn,10pt]{onepgnote1}
-\usepackage{fontspec} % WICHTIG FÜR LuaLaTeX!
-\setmainfont{Latin Modern Roman} % oder eine andere Systemschriftart
-\usepackage{dsfont, amsmath,amssymb}
+
+% Essential packages
+\usepackage{fontspec} % For LuaLaTeX/XeLaTeX
+\setmainfont{Latin Modern Roman}
+\usepackage{amsmath,amssymb,dsfont}
 \usepackage[margin=10pt]{geometry}
 \usepackage{yhmath}
 \usepackage{tikz}
-\usetikzlibrary{calc}
-\usepackage{pifont}
+\usepackage[a]{esvect}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
-\usepackage{colortbl}
-\usepackage{xcolor}
-\usepackage{array}
+\usetikzlibrary{calc,arrows.meta,positioning}
+\usepackage{xcolor} % Only once, with dvipsnames if needed
+\usepackage{colortbl,array}
 \renewcommand{\arraystretch}{1.5}
-\usetikzlibrary{arrows.meta, positioning}
-\usepackage[a]{esvect}
-%%%%%%%%%%%%ToDo
-\usepackage{xargs}  
-\usepackage[dvipsnames]{xcolor}
-\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
 
+% ToDo notes (disable for final)
+\usepackage{xargs}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
 \newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
 \newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
 \newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
 \newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Red!55,bordercolor=Red,#1]{#2}}
 \newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
-\newcounter{todocounter}  \newcommandx{\todocount}[2][1=]{\stepcounter{todocounter}\todo[linecolor=YellowGreen,backgroundcolor=YellowGreen!25,bordercolor=YellowGreen,#1]{\thetodocounter: #2}}
+\newcounter{todocounter}
+\newcommandx{\todocount}[2][1=]{\stepcounter{todocounter}\todo[linecolor=YellowGreen,backgroundcolor=YellowGreen!25,bordercolor=YellowGreen,#1]{\thetodocounter: #2}}
 
-%%%%%%%%%%%%%
+% Watermark
 \usepackage{draftwatermark}
 \SetWatermarkText{©FS Mathematik Gymnasium Gröbenzell}
 \SetWatermarkScale{0.3}
 \SetWatermarkColor[gray]{0.75}
 
-%%%%
-
+% tcolorbox for notes
 \usepackage{tcolorbox}
+\renewtcbox{\notebox}{colback=yellow, colframe=yellow, sharp corners, nobeforeafter, box align=base, size=tight}
+\renewcommand\mynote{\notebox{Hinweis:}\ }
 
-\renewtcbox{\notebox}{%
-  colback=yellow,      % Hintergrundfarbe
-  colframe=yellow,     % Rahmenfarbe
-  sharp corners,       % eckige Ecken
-  nobeforeafter,       % kein Abstand davor/danach
-  box align=base,      % Ausrichtung zur Grundlinie
-  size=tight           % kompakte Größe
-}
-
-\renewcommand\mynote{\notebox{Hinweis:}\ }  % Ersetzt "Note" durch "Hinweis"
-\newcommand{\kariert}[3]{
+% Custom commands
+\newcommand{\kariert}[3]{%
+  \begingroup
     \footnotesize #1 \normalsize\newline
     \begin{tikzpicture}
-    \draw[step=0.5cm,color=gray] (0,0) grid (#2 cm ,#3 cm);
-    \end{tikzpicture}}
+      \draw[step=0.5cm,color=gray] (0,0) grid (#2 cm ,#3 cm);
+    \end{tikzpicture}
+  \endgroup
+}
+
 \begin{document}
 % no header, no footer.
 \pagestyle{empty}
