@@ -960,8 +960,8 @@ Eine Funktion P, die jedem Ereignis $A$ eine reelle Zahl $P(A)$ zuordnet, heißt
     \item $P(A \cup B) = P(A) + P(B) - P(A\cap B)$
 \end{itemize}
 \subsection{Bedingte Wahrscheinlichkeit}\\
-Ist das Ereignis A eingetreten, dann ist die \textcolor{red}{bedingte Wahrscheinlichkeit} für das Eintreten eines Ereignisses B gleich $$P_A(B) = \frac{P(A \cap B)}{P(A)}$$. Folgt aus der Anwendung der Pfadregeln.\\
-\scalebox{0.75}{
+Ist das Ereignis A eingetreten, dann ist die \textcolor{red}{bedingte Wahrscheinlichkeit} für das Eintreten eines Ereignisses B gleich \\$P_A(B) = \dfrac{P(A \cap B)}{P(A)}$. Folgt aus der Anwendung der Pfadregeln.\\
+\scalebox{0.65}{
 % allgemeines Layout des Baums
 \tikzstyle{level 1}=[level distance=2.5cm, sibling distance=5cm]
 \tikzstyle{level 2}=[level distance=2.5cm, sibling distance=2.5cm]
@@ -1031,20 +1031,19 @@ Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, w
     \end{tabular} 
 \end{enumerate}
 \begin{itemize}
-\item Eigenschaften des Binomialkoeffizienten\\
+\item Eigenschaften des Binomialkoeffizienten
 \end{itemize}
 \begin{enumerate}
     \item Der Binomialkoeffizient ist symmetrisch $\longrightarrow \binom{n}{k} = \binom{n}{n-k}$\\
     \item Besondere Werte des Binomialkoeffizienten $\binom{n}{0}= 1; \binom{n}{1} = n$ und $\binom{n}{n}=1$
 \end{enumerate}
+\newpage
 \subsection{Zufallsgrößen}
 \begin{itemize}
     \item Eine Funktion $X$, die jedem Ergebnis $\omega$ eines Ergebnisraumes $\Omega$ eine reelle Zahl $x$ zuordnet, heißt \textcolor{red}{Zufallsgröße\footnote{Zufallsgröße $\longrightarrow$ ZG}} X.
     \item Jeder Wert $x$ einer ZG $X$ tritt mit einer bestimmten Wahrscheinlichkeit $P(X=x)$ auf. Die Funktion, die jedem Wert $x$ einer ZG $X$ die Wahrscheinlichkeit $P(X=x)$ zuordnet, heißt \textcolor{red}{Wahrscheinlichkeitsverteilung} der ZG $X$.
-   
-    \item Die vollständige Zuordnung der Werte einer ZG $X$ und der zugehörigen Wahrscheinlichkeiten $P(X=x)$ beschreibt die Wahrscheinlichkeitsverteilung
      \item Als Beispiel ist hier $P(X=4) = 0,2$ dargestellt.
-    \begin{tikzpicture}[>=Stealth, scale=1]
+   \begin{tikzpicture}[>=Stealth, scale=0.8]
 
 % Ergebnisraum Omega (kompakter)
 \draw[orange] (0,4.5) ellipse (3.2cm and 0.8cm);
@@ -1076,7 +1075,7 @@ Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, w
 \draw[->] (-0.1,1.5) -- (3.6,1.5) node[anchor=west] {$P(X = x)$};
 
 % Tick-Marken und Beschriftungen
-\foreach \i/\label in {0/0, 1/0.2, 2/0.4, 3/0.6, 4/0.8, 5/1} {
+\foreach \i/\label in {0/0, 1/0.2,  3/0.6, 5/1} {
   \draw (\i*0.6 + 0.3,1.5) -- ++(0,-0.1); % Markierung
   \node at (\i*0.6 + 0.3,1.2) {\label};   % Beschriftung
 }
@@ -1101,8 +1100,8 @@ Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, w
     \item Als Anwendung der Kombinatorik mit den Einschränkungen \textcolor{red}{ziehen ohne zurücklegen} und \textcolor{red}{ohne Beachtung der Reihenfolge}
     \item Es gibt $\binom{n}{k}$ Möglichkeiten $k$ Objekte ohne Berücksichtigung der Reihenfolge aus $n$ verschiedenen Objekten auszuwählen.
     \item Aus einer Urne mit $N$ Kugeln, wovon $S$ schwarz sind, werden $n$ Kugeln ohne Zurücklegen gezogen. Die ZG $X$ beschreibt die Anzahl der gezogenen schwarzen Kugeln.\\
-Dann gilt für die Wahrscheinlichkeitsverteilung dieser Zufallsgröße $P(X = k) = \dfrac{\binom{S}{k}\cdot \binom{N-S}{n-k}}{\binom{N}{n}}$ mit $k\leq n$ und $k\leq S$
-\item Beispiel: Für die Messe wurden \textcolor{red}{$200$} Probepackungen vorbereitet; \textcolor{red}{$10$} dieser Probepackungen wurde jeweils ein Gutschein beigelegt. An \textcolor{red}{$180$} Besucher wird jeweils eine zufällig ausgewählte Probepackung verschenkt. Berechnen Sie die Wahrscheinlichkeit dafür, dass sich unter den verschenkten Packungen \textcolor{red}{$9$} Packungen mit einem Gutschein befinden.\\
+Wahrscheinlichkeitsverteilung dieser Zufallsgröße \\$P(X = k) = \dfrac{\binom{S}{k}\cdot \binom{N-S}{n-k}}{\binom{N}{n}}$ mit $k\leq n$ und $k\leq S$
+\item Beispiel: 
 \begin{enumerate}
 \item $N=200$ , $S = 10$, $n=180$ und $k=9$\\
     \item $P(X=9)= \dfrac {\binom{10}{9} \cdot \binom {190}{171}}{\binom{200}{180}} \approx 39,74\%$
@@ -1167,14 +1166,33 @@ Dann gilt für die Wahrscheinlichkeitsverteilung dieser Zufallsgröße $P(X = k)
 
 \end{tikzpicture}}
 \subsubsection{Wahrscheinlichkeiten}
-\begin{enumerate}\\
-    \item Wahrscheinlichkeit eines Ergebnisses $\omega$ in einer Bernoulli-Kette $\longrightarrow \text{Wahrscheinlichkeit entlang eines Astes}\\
-P_p^n(\omega) = \underbrace{p^k}_{\shortstack{\textcolor{red}{\footnotesize{Treffer-}}\\ \textcolor{red}{\footnotesize{wahrscheinlichkeit}}}} \cdot
+\begin{itemize}
+    \item Wahrscheinlichkeit eines Ergebnisses $\omega$ in einer Bernoulli-Kette $\longrightarrow$ Wahrscheinlichkeit entlang eines Astes\\ $P_p^n(\omega) = \underbrace{p^k}_{\shortstack{\textcolor{red}{\footnotesize{Treffer-}}\\ \textcolor{red}{\footnotesize{wahrscheinlichkeit}}}} \cdot
 \underbrace{(1 - p)^{n - k}}_{\shortstack{\footnotesize{\textcolor{red}{Nieten-}}\\ \footnotesize{\textcolor{red}{wahrscheinlichkeit}}}}$\\
     \item Wahrscheinlichkeit für \textcolor{red}{genau k} Treffer beträgt\\ $P_p^n(X = k) = \underbrace{\binom{n}{k}}_{\shortstack{\textcolor{red}{\footnotesize{Anzahl der Pfade}}\\ \textcolor{red}{\footnotesize{mit $k$ Treffern}}}} \cdot p^k \cdot (1 - p)^{n - k}$\\
     \item Mindestens ein Treffer\\ $P_p^n(X\geq 1) = 1- P_p^n(X=0) =1-q^n$\\
-    \item Anwendung der Wahrscheinlichkeiten $\longrightarrow$ 3m$-$ Aufgaben
+    \item Anwendung der Wahrscheinlichkeiten $\longrightarrow$ 3m$-$ Aufgaben\\
+\begin{enumerate}
+    \item Mindest-Trefferwahrscheinlichkeit $p$ bei gegebenem $n$
+    \begin{equation*}
+        \begin{split}
+            P^5_p(X\geq 1) &\geq 0,9\\
+            1-P^5_p(X=0)&\geq 0,9\\
+            1-(1-p)^5 &\geq 0,9\\
+            p\geq \sqrt[5]{0,1}
+        \end{split}
+    \end{equation*}
+    \item Mindest-Anzahl an Versuchen $n$ bei gegebenem $p$
+    \begin{equation*}
+        \begin{split}
+            P^n_{0,6}(X\geq 1) &\geq 0,999\\
+            1-P^n_{0,6}(X=0)&\geq 0,999\\
+            1-(0,4)^n &\geq 0,9\\
+           n\geq \frac{\ln{(0,001)}}{\ln{(0,4)}}
+        \end{split}
+    \end{equation*}
 \end{enumerate}
+\end{itemize}
 \subsubsection{Erwartungswert und Varianz}
 \begin{itemize}
     \item Wahrscheinlichkeitsverteilung eine Binomialverteilung
