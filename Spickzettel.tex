@@ -947,9 +947,9 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 \subsection{Axiomatischer Aufbau der Stochastik}\\
 Eine Funktion P, die jedem Ereignis $A$ eine reelle Zahl $P(A)$ zuordnet, heißt \textcolor{red}{Wahrscheinlichkeitsverteilung}, wenn sie die folgenden Eigenschaften besitzt: 
 \begin{itemize}
-    \item Axiom I: $P(A) \geq 0$ 
+    \item Axiom I: $P(A) \geq 0$
     \item Axiom II: $P(\Omega) = 1$ 
-    \item Axiom III: $A\cap B = \{ \hspace{0.15cm} \} \Rightarrow P(A\cup B) = P(A) + P(B)$ 
+    \item Axiom III: $A\cap B = \{ \hspace{0.15cm} \} \Rightarrow P(A\cup B) = P(A) + P(B)$  wenn die Schnittmenge zweier Ereignisse leer ist, dann gilt für die Wahrscheinlichkeit der Vereinigung zweier Ereignisse \\$P(A\cup B) = P(A) + P(B)$ 
 \end{itemize}
 \subsubsection{Eigenschaften}
 \begin{itemize}
@@ -1016,6 +1016,27 @@ Ist das Ereignis A eingetreten, dann ist die \textcolor{red}{bedingte Wahrschein
 Nach der ersten Pfadregel berechnet sich die Wahrscheinlichkeit $P(A\cap B)$ durch das Produkt der einzelnen Pfadwahrscheinlichkeiten. Es gilt damit also $P(A\cap B) = P(A) \cdot P_{A}(B)$ und daraus folgt die Beziehung: $P_{A}(B) = \dfrac{P(A \cap B)}{P(A)}$
 \subsubsection{Stochastische Unabhängigkeit}\\
 Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, wenn $P(A \cap B) = P(A)\cdot P(B)$ gilt. Andernfalls nennt man diese \textcolor{red}{stochastisch abhängig}.
+\subsection{Kombinatorik}\\
+\begin{enumerate}
+    \item Permutation als  Anordnung von $n$ Objekten in einer bestimmten Reihenfolge $\longrightarrow n! = n\cdot ( n-1) \cdot (n-2)\cdot \ldots \cdot 3\cdot  2\cdot 1$\\
+    \item Unterscheidungsmöglichkeiten in einem Urnenexperimentes: Man zieht aus einer Menge mit $n$ Elementen $k-$Elemente heraus\\
+    \begin{tabular}{|c||c|c|}
+    \hline
+         &  Mit Reihenfolge & Ohne Reihenfolge\\
+           \hline\hline
+     Mit Zurücklegen   & $n^k$ & $\binom{n+k-1}{k}$\\
+     \hline
+     Ohne Zurücklegen & $\frac{n!}{\left(n-k\right)!}$& $\binom{n}{k} = \frac{n!}{k!\left(n-k\right)!}$\\
+     \hline
+    \end{tabular} 
+\end{enumerate}
+\begin{itemize}
+\item Eigenschaften des Binomialkoeffizienten\\
+\end{itemize}
+\begin{enumerate}
+    \item Der Binomialkoeffizient ist symmetrisch $\longrightarrow \binom{n}{k} = \binom{n}{n-k}$\\
+    \item Besondere Werte des Binomialkoeffizienten $\binom{n}{0}= 1; \binom{n}{1} = n$ und $\binom{n}{n}=1$
+\end{enumerate}
 \subsection{Zufallsgrößen}
 \begin{itemize}
     \item Eine Funktion $X$, die jedem Ergebnis $\omega$ eines Ergebnisraumes $\Omega$ eine reelle Zahl $x$ zuordnet, heißt \textcolor{red}{Zufallsgröße\footnote{Zufallsgröße $\longrightarrow$ ZG}} X.
@@ -1070,5 +1091,13 @@ Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, w
     \item Eine ZG nimmt die Werte $x_1, x_2,\ldots , x_n$ mit den Wahrscheinlichkeiten $P(X=x_1), P(X=x_2), \ldots, P(X=x_n)$ an. Dann heißt der zu erwartende Mittelwert\\ $ \mu =E(X) = \sum\limits_{i=1}^n x_i\cdot P(X=x_i) \\= x_1\cdot P(X=x_1) + x_2\cdot P(X=x_2) +\ldots + x_n \cdot P(X=x_n)$ \textcolor{red}{Erwartungswert} von $X$. \mynote Der Erwartungswert $\mu$ ist häufig \textcolor{red}{kein} Wert, den die ZG annimmt.
     \item Eine ZG mit $E(X) = \mu$ nehme die Werte $x_1, x_2,\ldots , x_n$ mit den Wahrscheinlichkeiten $P(X=x_1), P(X=x_2), \ldots, P(X=x_n)$ an. Dann heißt die mittlere quadratische Abweichung von $\mu$ \textcolor{red}{Varianz} von $X$: \\ $Var(X) = \sum\limits_{i=1}^n \left(x_i - \mu\right)^2 \cdot P(X = x_i)\\ = \left(x_1 - \mu\right)^2 \cdot P(X = x_1) + \ldots + \left(x_n - \mu\right)^2 \cdot P(X = x_n)$
     \item Die Standardabweichung $\sigma$ einer ZG $X$ bestimmt sich durch $\sigma = \sqrt{Var(X)}$
+\end{itemize}
+
+\subsection{Hypergeometrische Verteilung}
+\begin{itemize}
+    \item Als Anwendung der Kombinatorik mit den Einschränkungen \textcolor{red}{ziehen ohne zurücklegen} und \textcolor{red}{ohne Beachtung der Reihenfolge}
+    \item Es gibt $\binom{n}{k}$ Möglichkeiten $k$ Objekte ohne Berücksichtigung der Reihenfolge aus $n$ verschiedenen Objekten auszuwählen.
+    \item Aus einer Urne mit $N$ Kugeln, wovon $S$ schwarz sind, werden $n$ Kugeln ohne Zurücklegen gezogen. Die ZG $X$ beschreibt die Anzahl der gezogenen schwarzen Kugeln.\\
+Dann gilt für die Wahrscheinlichkeitsverteilung dieser Zufallsgröße $P(X = k) = \frac{\binom{S}{k}\cdot \binom{N-S}{n-k}}{\binom{N}{n}}$ mit $k\leq n$ und $k\leq S$
 \end{itemize}
 \end{document}
