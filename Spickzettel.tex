@@ -1041,7 +1041,9 @@ Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, w
 \begin{itemize}
     \item Eine Funktion $X$, die jedem Ergebnis $\omega$ eines Ergebnisraumes $\Omega$ eine reelle Zahl $x$ zuordnet, heißt \textcolor{red}{Zufallsgröße\footnote{Zufallsgröße $\longrightarrow$ ZG}} X.
     \item Jeder Wert $x$ einer ZG $X$ tritt mit einer bestimmten Wahrscheinlichkeit $P(X=x)$ auf. Die Funktion, die jedem Wert $x$ einer ZG $X$ die Wahrscheinlichkeit $P(X=x)$ zuordnet, heißt \textcolor{red}{Wahrscheinlichkeitsverteilung} der ZG $X$.
-    \item Als Beispiel ist hier $P(X=4) = 0,2$ dargestellt.\\
+   
+    \item Die vollständige Zuordnung der Werte einer ZG $X$ und der zugehörigen Wahrscheinlichkeiten $P(X=x)$ beschreibt die Wahrscheinlichkeitsverteilung
+     \item Als Beispiel ist hier $P(X=4) = 0,2$ dargestellt.
     \begin{tikzpicture}[>=Stealth, scale=1]
 
 % Ergebnisraum Omega (kompakter)
@@ -1060,11 +1062,11 @@ Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, w
 
 % Wertemenge W
 % Blauer Hintergrund unter Achse von 1.5 bis 12
-\fill[blue!20] (-1.5,2.9) rectangle (5.5,3.1);
-\draw[->] (-2.2,3) -- (7,3) node[right] {$x$};
-\foreach \x in {-2,-1,0,1,2,3,4,5,6}
+\fill[blue!20] (-1.5,2.9) rectangle (4.5,3.1);
+\draw[->] (-2.2,3) -- (5,3) node[right] {$x$};
+\foreach \x in {-2,-1,0,1,2,3,4}
   \draw (\x,2.9) -- (\x,3.1) node[below=2pt] {\small \x};
-\node[blue] at (5.2,3.4) {Wertemenge $W$};
+\node[blue] at (4.8,3.4) {Wertemenge $W$};
 
 % Grüner Pfeil: Zufallsgröße X
 \draw[->, thick, green!60!black] (0.5,4.2) to[bend left=30] (4,3.1);
@@ -1085,6 +1087,7 @@ Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, w
 
 \node[red] at (3.4,2.3) {Wahrscheinlichkeitsverteilung};
 \end{tikzpicture}
+  
 \end{itemize}
 \subsubsection{Erwartungswert und Varianz}
 \begin{itemize}
@@ -1098,6 +1101,12 @@ Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, w
     \item Als Anwendung der Kombinatorik mit den Einschränkungen \textcolor{red}{ziehen ohne zurücklegen} und \textcolor{red}{ohne Beachtung der Reihenfolge}
     \item Es gibt $\binom{n}{k}$ Möglichkeiten $k$ Objekte ohne Berücksichtigung der Reihenfolge aus $n$ verschiedenen Objekten auszuwählen.
     \item Aus einer Urne mit $N$ Kugeln, wovon $S$ schwarz sind, werden $n$ Kugeln ohne Zurücklegen gezogen. Die ZG $X$ beschreibt die Anzahl der gezogenen schwarzen Kugeln.\\
-Dann gilt für die Wahrscheinlichkeitsverteilung dieser Zufallsgröße $P(X = k) = \frac{\binom{S}{k}\cdot \binom{N-S}{n-k}}{\binom{N}{n}}$ mit $k\leq n$ und $k\leq S$
+Dann gilt für die Wahrscheinlichkeitsverteilung dieser Zufallsgröße $P(X = k) = \dfrac{\binom{S}{k}\cdot \binom{N-S}{n-k}}{\binom{N}{n}}$ mit $k\leq n$ und $k\leq S$
+\item Beispiel: Für die Messe wurden \textcolor{red}{$200$} Probepackungen vorbereitet; \textcolor{red}{$10$} dieser Probepackungen wurde jeweils ein Gutschein beigelegt. An \textcolor{red}{$180$} Besucher wird jeweils eine zufällig ausgewählte Probepackung verschenkt. Berechnen Sie die Wahrscheinlichkeit dafür, dass sich unter den verschenkten Packungen \textcolor{red}{$9$} Packungen mit einem Gutschein befinden.\\
+\begin{enumerate}
+\item $N=200$ , $S = 10$, $n=180$ und $k=9$\\
+    \item $P(X=9)= \dfrac {\binom{10}{9} \cdot \binom {190}{171}}{\binom{200}{180}} \approx 39,74\%$
+\end{enumerate}
 \end{itemize}
+\subsection{Binomialverteilung}
 \end{document}
