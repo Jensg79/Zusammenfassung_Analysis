@@ -1109,4 +1109,82 @@ Dann gilt für die Wahrscheinlichkeitsverteilung dieser Zufallsgröße $P(X = k)
 \end{enumerate}
 \end{itemize}
 \subsection{Binomialverteilung}
+\subsubsection{Bernoulli-Kette}
+\begin{itemize}
+    \item Ein ZG mit nur zwei möglichen Ergebnissen nennt man Bernoulli-Experiment $ \longrightarrow$ Treffer "1" bzw. Niete "0"
+    \item Trefferwahrscheinlichkeit $p$
+    \item Nietenwahrscheinlichkeit $q = 1-p$
+    \item Wird ein Bernoulli-Experiment $n-$mal unabhängig durchgeführt, spricht man von einer \textcolor{red}{Bernoulli-Kette} der \textcolor{red}{Länge n}. 
+    \item Die Trefferwahrscheinlichkeit $p$ bleibt dabei konstant \\$\longrightarrow$ ziehen ohne zurücklegen ohne Beachtung der Reihenfolge
+    \item Beispiel mit zwei Stufen\\
+    % allgemeines Layout des Baums
+\tikzstyle{level 1}=[level distance=2.5cm, sibling distance=5cm]
+\tikzstyle{level 2}=[level distance=2.5cm, sibling distance=2.5cm]
+% definiert Knoten- und Endpunkte
+% text width ändert die Boxbreite wobei 1em einem Zeichen entspricht
+\tikzstyle{bag} = [circle, draw, text width=1em, inner sep=2pt, text centered]
+\tikzstyle{end} = [circle, minimum width=5pt, fill, inner sep=0pt]
+\scalebox{0.75}{\begin{tikzpicture}[grow=down, sibling distance=4cm, level distance=2.5cm]
+  \tikzset{bag/.style={circle, draw=black, minimum size=6mm, inner sep=2pt}}
+
+  \node[bag] {}
+  child {
+    node (A) [bag] {$1$}
+    child {
+      node (AB) [bag] {$1$}
+      edge from parent
+        node[left] {$p$}
+    }
+    child {
+      node (AnB) [bag] {$0$}
+      edge from parent
+        node[right] {$q$}
+    }
+    edge from parent
+      node[left] {$p$}
+  }
+  child {
+    node (nA) [bag] {$0$}
+    child {
+      node (nAB) [bag] {$1$}
+      edge from parent
+        node[left] {$p$}
+    }
+    child {
+      node (nAnB) [bag] {$0$}
+      edge from parent
+        node[right] {$q$}
+    }
+    edge from parent
+      node[right] {$q$}
+  };
+
+  % Pfad-Wahrscheinlichkeiten direkt unter den Knoten
+  \node[below=2mm of AB]   {$P(1\cap 1)$};
+  \node[below=2mm of AnB]  {$P(1 \cap 0)$};
+  \node[below=2mm of nAB]  {$P(0 \cap 1)$};
+  \node[below=2mm of nAnB] {$P(0 \cap 0)$};
+
+\end{tikzpicture}}
+\subsubsection{Wahrscheinlichkeiten}
+\begin{enumerate}\\
+    \item Wahrscheinlichkeit eines Ergebnisses $\omega$ in einer Bernoulli-Kette $\longrightarrow \text{Wahrscheinlichkeit entlang eines Astes}\\
+P_p^n(\omega) = \underbrace{p^k}_{\shortstack{\textcolor{red}{\footnotesize{Treffer-}}\\ \textcolor{red}{\footnotesize{wahrscheinlichkeit}}}} \cdot
+\underbrace{(1 - p)^{n - k}}_{\shortstack{\footnotesize{\textcolor{red}{Nieten-}}\\ \footnotesize{\textcolor{red}{wahrscheinlichkeit}}}}$\\
+    \item Wahrscheinlichkeit für \textcolor{red}{genau k} Treffer beträgt\\ $P_p^n(X = k) = \underbrace{\binom{n}{k}}_{\shortstack{\textcolor{red}{\footnotesize{Anzahl der Pfade}}\\ \textcolor{red}{\footnotesize{mit $k$ Treffern}}}} \cdot p^k \cdot (1 - p)^{n - k}$\\
+    \item Mindestens ein Treffer\\ $P_p^n(X\geq 1) = 1- P_p^n(X=0) =1-q^n$\\
+    \item Anwendung der Wahrscheinlichkeiten $\longrightarrow$ 3m$-$ Aufgaben
+\end{enumerate}
+\subsubsection{Erwartungswert und Varianz}
+\begin{itemize}
+    \item Wahrscheinlichkeitsverteilung eine Binomialverteilung
+    \begin{enumerate}
+        \item $B(n,p) = P_p^n(X=k) = \binom{n}{k} \cdot p^k \cdot q^{n-k}$ mit $k\in \{0, 1, \ldots, n\}$\\
+        \item kumulative Verteilung:\\ $F_p^n(k) = P_p^n(X\leq k)=\sum\limits_{i=0}^k P_p^n(X=k)\\ =\sum\limits_{i=0}^k \binom{n}{k} \cdot p^k \cdot q^{n-k}$ mit $k\in \{0, 1, \ldots, n\}$
+    \end{enumerate}
+    \item Erwartungswert: $E(X) = n\cdot p$
+    \item Varianz: $Var(X)= n\cdot p \cdot q$
+    \item Standardabweichung: $\sigma = \sqrt{Var(x)} = \sqrt{n\cdot p \cdot q}$
+\end{itemize}
+\end{itemize}
 \end{document}
