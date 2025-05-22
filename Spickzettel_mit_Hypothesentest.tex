@@ -1177,7 +1177,8 @@ Wahrscheinlichkeitsverteilung dieser Zufallsgröße \\$P(X = k) = \dfrac{\binom{
 \begin{itemize}
     \item Wahrscheinlichkeit eines Ergebnisses $\omega$ in einer Bernoulli-Kette $\longrightarrow$ Wahrscheinlichkeit entlang eines Astes\\ $P_p^n(\omega) = \underbrace{p^k}_{\shortstack{\textcolor{red}{\footnotesize{Treffer-}}\\ \textcolor{red}{\footnotesize{wahrscheinlichkeit}}}} \cdot
 \underbrace{(1 - p)^{n - k}}_{\shortstack{\footnotesize{\textcolor{red}{Nieten-}}\\ \footnotesize{\textcolor{red}{wahrscheinlichkeit}}}}$\\
-    \item Wahrscheinlichkeit für \textcolor{red}{genau k} Treffer beträgt\\ $P_p^n(X = k) = \underbrace{\binom{n}{k}}_{\shortstack{\textcolor{red}{\footnotesize{Anzahl der Pfade}}\\ \textcolor{red}{\footnotesize{mit $k$ Treffern}}}} \cdot p^k \cdot (1 - p)^{n - k}$\\
+    \item Wahrscheinlichkeit für \textcolor{red}{genau k} Treffer beträgt\\ $P_p^n(X = k) = \underbrace{\binom{n}{k}}_{\shortstack{\textcolor{red}{\footnotesize{Anzahl der Pfade}}\\ \textcolor{red}{\footnotesize{mit $k$ Treffern}}}} \underbrace{p^k}_{\shortstack{\textcolor{green}{\footnotesize{Treffer-}}\\ \textcolor{green}{\footnotesize{wahrscheinlichkeit}}}} \cdot
+\underbrace{(1 - p)^{n - k}}_{\shortstack{\footnotesize{\textcolor{blue}{Nieten-}}\\ \footnotesize{\textcolor{blue}{wahrscheinlichkeit}}}}$\\
     \item Mindestens ein Treffer\\ $P_p^n(X\geq 1) = 1- P_p^n(X=0) =1-q^n$\\
     \item Anwendung der Wahrscheinlichkeiten $\longrightarrow$ 3m$-$ Aufgaben\\
 \begin{enumerate}

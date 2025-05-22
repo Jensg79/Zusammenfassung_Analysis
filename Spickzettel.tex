@@ -1122,7 +1122,7 @@ Wahrscheinlichkeitsverteilung dieser Zufallsgröße \\$P(X = k) = \dfrac{\binom{
     \item Nietenwahrscheinlichkeit $q = 1-p$
     \item Wird ein Bernoulli-Experiment $n-$mal unabhängig durchgeführt, spricht man von einer \textcolor{red}{Bernoulli-Kette} der \textcolor{red}{Länge n}. 
     \item Die Trefferwahrscheinlichkeit $p$ bleibt dabei konstant \\$\longrightarrow$ ziehen ohne zurücklegen ohne Beachtung der Reihenfolge
-    \item Beispiel mit zwei Stufen\\
+    \item Beispiel\\
     % allgemeines Layout des Baums
 \tikzstyle{level 1}=[level distance=2.5cm, sibling distance=5cm]
 \tikzstyle{level 2}=[level distance=2.5cm, sibling distance=2.5cm]
@@ -1177,7 +1177,8 @@ Wahrscheinlichkeitsverteilung dieser Zufallsgröße \\$P(X = k) = \dfrac{\binom{
 \begin{itemize}
     \item Wahrscheinlichkeit eines Ergebnisses $\omega$ in einer Bernoulli-Kette $\longrightarrow$ Wahrscheinlichkeit entlang eines Astes\\ $P_p^n(\omega) = \underbrace{p^k}_{\shortstack{\textcolor{red}{\footnotesize{Treffer-}}\\ \textcolor{red}{\footnotesize{wahrscheinlichkeit}}}} \cdot
 \underbrace{(1 - p)^{n - k}}_{\shortstack{\footnotesize{\textcolor{red}{Nieten-}}\\ \footnotesize{\textcolor{red}{wahrscheinlichkeit}}}}$\\
-    \item Wahrscheinlichkeit für \textcolor{red}{genau k} Treffer beträgt\\ $P_p^n(X = k) = \underbrace{\binom{n}{k}}_{\shortstack{\textcolor{red}{\footnotesize{Anzahl der Pfade}}\\ \textcolor{red}{\footnotesize{mit $k$ Treffern}}}} \cdot p^k \cdot (1 - p)^{n - k}$\\
+    \item Wahrscheinlichkeit für \textcolor{red}{genau k} Treffer beträgt\\ $P_p^n(X = k) = \underbrace{\binom{n}{k}}_{\shortstack{\textcolor{red}{\footnotesize{Anzahl der Pfade}}\\ \textcolor{red}{\footnotesize{mit $k$ Treffern}}}} \underbrace{p^k}_{\shortstack{\textcolor{green}{\footnotesize{Treffer-}}\\ \textcolor{green}{\footnotesize{wahrscheinlichkeit}}}} \cdot
+\underbrace{(1 - p)^{n - k}}_{\shortstack{\footnotesize{\textcolor{blue}{Nieten-}}\\ \footnotesize{\textcolor{blue}{wahrscheinlichkeit}}}}$\\
     \item Mindestens ein Treffer\\ $P_p^n(X\geq 1) = 1- P_p^n(X=0) =1-q^n$\\
     \item Anwendung der Wahrscheinlichkeiten $\longrightarrow$ 3m$-$ Aufgaben\\
 \begin{enumerate}
@@ -1203,7 +1204,7 @@ Wahrscheinlichkeitsverteilung dieser Zufallsgröße \\$P(X = k) = \dfrac{\binom{
 \end{itemize}
 \subsubsection{Erwartungswert und Varianz}
 \begin{itemize}
-    \item Wahrscheinlichkeitsverteilung eine Binomialverteilung
+    \item Wahrscheinlichkeitsverteilung eine Binomialverteilung\\
     \begin{enumerate}
         \item $B(n,p) = P_p^n(X=k) = \binom{n}{k} \cdot p^k \cdot q^{n-k}$ mit\\ $k\in \{0, 1, \ldots, n\}$\\
         \item kumulative Verteilung:\\ $F_p^n(k) = P_p^n(X\leq k)=\sum\limits_{i=0}^k P_p^n(X=k)\\ =\sum\limits_{i=0}^k \binom{n}{k} \cdot p^k \cdot q^{n-k}$ mit $k\in \{0, 1, \ldots, n\}$
