@@ -183,13 +183,13 @@ Wir erhalten aus dem Graphen $G_f$ der Funktion f den Graphen der Funktion g mit
   \draw[thick,domain=-2:2,smooth,variable=\x,blue] 
     plot ({\x},{\x*\x});
 \end{tikzpicture}
-\item a ungerade: \begin{tikzpicture}[scale=0.25]
+\item a ungerade: \begin{tikzpicture}[scale=0.2]
   % Achsen
   \draw[->] (-3,0) -- (3,0) node[right] {$x$};
-  \draw[->] (0,-5) -- (0,5) node[above] {$y$};
+  \draw[->] (0,-3) -- (0,3) node[above] {$y$};
   % Gitter
-  \draw[very thin,color=gray!30] (-3,-5) grid (3,5);
-     \draw[thick,domain=-1.65:1.65,smooth,variable=\x,red] 
+  \draw[very thin,color=gray!30] (-3,-3) grid (3,3);
+     \draw[thick,domain=-1.5:1.5,smooth,variable=\x,red] 
     plot ({\x},{\x*\x*\x});
 \end{tikzpicture}\\
 \item $n$ gerade und $a_n > 0 \longrightarrow \lim\limits_{x \to \pm\infty} f(x) = \infty$\\
