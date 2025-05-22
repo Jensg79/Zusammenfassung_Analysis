@@ -46,10 +46,20 @@
     \end{tikzpicture}
   \endgroup
 }
-
+\usepackage{pdfpages}
 \begin{document}
 % no header, no footer.
 \pagestyle{empty}
+\cleardoublepage         % Neue rechte Seite (zwingt Seite mit gerader/ungerader Logik)
+\includepdf[
+  pages=1,
+  pagecommand={},
+  offset=0mm 0mm,
+  noautoscale=true,
+  width=\paperwidth,
+  height=\paperheight
+]{Deckblatt1.pdf}
+\cleardoublepage         % Inhalt beginnt auf nächster rechten Seite
 \section{Analysis}
 \subsection{Grundlagen:}
 \begin{itemize}
@@ -1250,10 +1260,7 @@ des Fehlers der einen Art auf Kosten der Wahrscheinlichkeit des Fehlers der ande
 \subsection{Platz für eigene Notizen:}
 \kariert{Notizen:}{10}{15}\\
 \kariert{}{10}{28.5}
-\kariert{}{10}{28.5}
-\kariert{}{10}{28.5}
-\kariert{}{10}{28.5}
-\kariert{}{10}{28.5}
-\kariert{}{10}{28.5}
-\kariert{}{10}{28.5}
+
+
+
 \end{document}
