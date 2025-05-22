@@ -122,6 +122,12 @@ Wir erhalten aus dem Graphen $G_f$ der Funktion f den Graphen der Funktion g mit
 \item $\tan{(\alpha)} = m \longrightarrow \alpha = \tan^{-1}{(m)}$
 \end{enumerate}
 \item Tangentengleichung $y_T$ durch den Punkt $P(x_0|f(x_0)) \in G_f \\y_T = f'(x_0)\cdot(x-x_0) + f(x_0) $
+\item Newton-Verfahren $\longrightarrow$ Iterationsverfahren zur Bestimmung von Nullstellen\\
+\begin{enumerate}
+    \item Startwert $x_0 \longrightarrow $ je näher an der NS desto besser\\
+    \item $x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$
+    
+\end{enumerate}
 \end{itemize}
 \subsection{Grenzwerte spezieller Funktionen:}
 \begin{itemize}
@@ -229,7 +235,7 @@ Wir erhalten aus dem Graphen $G_f$ der Funktion f den Graphen der Funktion g mit
 \begin{enumerate}\item z $<$ n: die $x-$Achse ist waagerechte Asymptote $\lim\limits_{x\longrightarrow \infty} f(x) = \lim\limits_{x\longrightarrow -\infty} f(x) = 0$\\
 \item  z $=$ n: waagerechte Asymptote die parallel zur x-Achse verläuft $\lim\limits_{x\longrightarrow \infty} f(x) = \lim\limits_{x\longrightarrow -\infty} f(x) = a \in\mathds{R}$\\
 \item z $=$ n+1: schräge Asymptote die direkt aus der Summenform ablesbar ist \\
-\mynote $f(x) =\underbrace{x+1}_{\text{Gleichung der \textcolor{red}{schrägen} Asymptote}} +\dfrac{2}{x-1}$\\
+\mynote $f(x) =\underbrace{x+1}_{\shortstack{\text{Gleichung der}\\ \text{\textcolor{red}{schrägen} Asymptote}}} +\dfrac{2}{x-1}$\\
 \item z $>$ n +1: Näherungskurve
 \end{enumerate}
  \end{itemize}
@@ -684,12 +690,12 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
     \coordinate (H) at (3.5,2.5) {};
     \draw[blue] (3.2,2.3)   node [above] {M};
     \draw[->, red]  (A) -- (B) node[sloped,midway,above] {$\vv{a}$};
-    \draw[->,green, very thick]  (B) -- (C) node[sloped,midway,above] {$\vv{BC}$};
+    \draw[->,blue, very thick]  (B) -- (C) node[sloped,midway,above] {$\vv{BC}$};
     \draw  (C) -- (D) node[] {};
     \draw[->,red]  (A) -- (D) node[sloped,above,very near end] {$\vv{b}$};
    \draw[->,red]  (A) -- (E) node[sloped,midway,above] {$\vv{c}$};
-   \draw[->,green, very thick]  (H) -- (B) node[sloped,below, near start] {$-\frac{1}{2}\vv{BS}$};
-   \draw[->,green, very thick]  (C) -- (G) node[sloped,above, midway,] {$\frac{1}{2}\vv{CS}$};
+   \draw[->,blue, very thick]  (H) -- (B) node[sloped,below, near start] {$-\frac{1}{2}\vv{BS}$};
+   \draw[->,blue, very thick]  (C) -- (G) node[sloped,above, midway,] {$\frac{1}{2}\vv{CS}$};
    \draw  (E) -- (B) node[] {};
    \draw  (E) -- (C) node[] {};
    \draw  (E) -- (D) node[] {};
@@ -762,15 +768,17 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
   \coordinate (G) at (1,1,1);
   \coordinate (H) at (0,1,1);
 %Vektoren zeichnen
-\draw[->,blue]  (A) -- (B) node[sloped,above,midway] {$\vv{AB}$};
-\draw[->,blue]  (A) -- (D) node[sloped,above,midway] {$\vv{AD}$};
-\draw[->,blue]  (A) -- (E) node[sloped,above,midway] {$\vv{AE}$};
+\draw[->,blue, very thick]  (A) -- (B) node[sloped,above,midway] {$\vv{AB}$};
+\draw[->,blue, very thick]  (A) -- (D) node[sloped,above,midway] {$\vv{AD}$};
+\draw[->,blue, very thick]  (A) -- (E) node[sloped,above,midway] {$\vv{AE}$};
+ \draw[] (B) -- (C) -- (D);
+  
   % Flächen zeichnen
-  \draw[] (A) -- (B) -- (C) -- (D) -- cycle;
+  %\draw[] (A) -- (B) -- (C) -- (D) -- cycle;
   \draw[] (D) -- (C) -- (G) -- (H) -- cycle;
   \draw[] (B) -- (F) -- (G) -- (C) -- cycle;
-  \draw[] (A) -- (E) -- (F) -- (B) -- cycle;
-  \draw[] (A) -- (D) -- (H) -- (E) -- cycle;
+%  \draw[] (A) -- (E) -- (F) -- (B) -- cycle;
+ % \draw[] (A) -- (D) -- (H) -- (E) -- cycle;
   \draw[] (E) -- (F) -- (G) -- (H) -- cycle;
 
   % Punkte beschriften

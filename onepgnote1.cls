@@ -57,8 +57,8 @@ On that I will work later.]
 }
 \renewcommand{\subsection}[1]{%
 	\par\noindent
-	\tcbox[colback=red!10!white,
-	       colframe=cyan!40!black,
+	\tcbox[colback=red!40!white,
+	       colframe=cyan!70!black,
 	       boxrule=0.4pt,
 	       sharp corners,
 	       left=2pt, right=2pt, top=1pt, bottom=1pt,
@@ -70,8 +70,8 @@ On that I will work later.]
 }
 \renewcommand{\subsubsection}[1]{%
 	\par\noindent
-	\tcbox[colback=yellow!20!white,
-	       colframe=gray!50,
+	\tcbox[colback=blue!30!white,
+	       colframe=black!50,
 	       boxrule=0.3pt,
 	       sharp corners,
 	       left=2pt, right=2pt, top=1pt, bottom=1pt,
@@ -91,7 +91,7 @@ On that I will work later.]
 \newcommand{\coloredctr}{%
 	\stepcounter{coloredboxcounter}% Increment the counter
 	\tikz[baseline=(box.base)]{
-		\node[rectangle, draw=black, fill=cyan!50, rounded corners=2pt,
+		\node[rectangle, draw=black, fill=cyan!60, rounded corners=2pt,
 		inner sep=2pt] (box)
 		{\thecoloredboxcounter};%
 	}%
