@@ -14,6 +14,8 @@
 \usepackage{xcolor} % Only once, with dvipsnames if needed
 \usepackage{colortbl,array}
 \renewcommand{\arraystretch}{1.5}
+\usepackage[absolute,overlay]{textpos} % falls du textuelle Positionierung bevorzugst
+
 
 % ToDo notes (disable for final)
 \usepackage{xargs}
@@ -51,13 +53,19 @@
 % no header, no footer.
 \pagestyle{empty}
 \cleardoublepage         % Neue rechte Seite (zwingt Seite mit gerader/ungerader Logik)
+% Deckblatt mit Copyright
 \includepdf[
   pages=1,
-  pagecommand={},
-  offset=0mm 0mm,
   noautoscale=true,
+  offset=0mm 0mm,
   width=\paperwidth,
-  height=\paperheight
+  height=\paperheight,
+  pagecommand={
+    \begin{tikzpicture}[remember picture, overlay]
+      \node[anchor=south east, xshift=-1cm, yshift=1cm] at (current page.south east) 
+        {\small\textcolor{red}{© 2025 FS Mathematik Gymnasium Gröbenzell}};
+    \end{tikzpicture}
+  }
 ]{Deckblatt1.pdf}
 \cleardoublepage         % Inhalt beginnt auf nächster rechten Seite
 \section{Analysis}
@@ -1132,7 +1140,7 @@ Wahrscheinlichkeitsverteilung dieser Zufallsgröße \\$P(X = k) = \dfrac{\binom{
     \item Nietenwahrscheinlichkeit $q = 1-p$
     \item Wird ein Bernoulli-Experiment $n-$mal unabhängig durchgeführt, spricht man von einer \textcolor{red}{Bernoulli-Kette} der \textcolor{red}{Länge n}. 
     \item Die Trefferwahrscheinlichkeit $p$ bleibt dabei konstant \\$\longrightarrow$ ziehen ohne zurücklegen ohne Beachtung der Reihenfolge
-    \item Beispiel mit zwei Stufen\\
+    \item Beispiel\\
     % allgemeines Layout des Baums
 \tikzstyle{level 1}=[level distance=2.5cm, sibling distance=5cm]
 \tikzstyle{level 2}=[level distance=2.5cm, sibling distance=2.5cm]
@@ -1176,10 +1184,10 @@ Wahrscheinlichkeitsverteilung dieser Zufallsgröße \\$P(X = k) = \dfrac{\binom{
   };
 
   % Pfad-Wahrscheinlichkeiten direkt unter den Knoten
-  \node[below=2mm of AB]   {$P(1\cap 1)$};
-  \node[below=2mm of AnB]  {$P(1 \cap 0)$};
-  \node[below=2mm of nAB]  {$P(0 \cap 1)$};
-  \node[below=2mm of nAnB] {$P(0 \cap 0)$};
+  \node[below=2mm of AB]   {$\vdots$};
+  \node[below=2mm of AnB]  {$\vdots$};
+  \node[below=2mm of nAB]  {$\vdots$};
+  \node[below=2mm of nAnB] {$\vdots$};
 
 \end{tikzpicture}}
 \end{itemize}
