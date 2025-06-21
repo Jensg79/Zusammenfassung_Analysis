@@ -131,7 +131,7 @@ Wir erhalten aus dem Graphen $G_f$ der Funktion f den Graphen der Funktion g mit
 \item ln-Funktion\\ \begin{enumerate} \item $f(x) = \ln(x)$ mit $x\in \mathds{R}^+ \longrightarrow f'(x) = \dfrac{1}{x}$ \end{enumerate}
 \item Wurzel\\ \begin{enumerate}\item $f(x) = \sqrt{x} = x^{\frac{1}{2}} \longrightarrow f'(x) = \dfrac{1}{2} \cdot x^{-\frac{1}{2}} = \frac{1}{2\sqrt{x}}$\\ \item $f(x)= \sqrt[n]{x} = x^{\frac{1}{n}} \longrightarrow f'(x) = \frac{1}{n} \cdot x^{\frac{1}{n} -1} = \frac{1}{n\cdot \sqrt[{n-1}]{x}}$\end{enumerate}
 \end{itemize}
-\subsection{Anwendung der 1. Ableitung}
+\subsection{Anwendung der 1. Ableitung:}
 \begin{itemize}
 \item Zusammenhang Steigung $m$ des Graphen $G_f$ einer Funktion $f$ an der Stelle $x_0 \in G_f$ mit der 1. Ableitung:\\
 \begin{enumerate}
@@ -1212,7 +1212,7 @@ Wahrscheinlichkeitsverteilung dieser Zufallsgröße \\$P(X = k) = \dfrac{\binom{
 \underbrace{(1 - p)^{n - k}}_{\shortstack{\footnotesize{\textcolor{red}{Nieten-}}\\ \footnotesize{\textcolor{red}{wahrscheinlichkeit}}}}$\\
     \item Wahrscheinlichkeit für \textcolor{red}{genau k} Treffer beträgt\\ $P_p^n(X = k) = \underbrace{\binom{n}{k}}_{\shortstack{\textcolor{red}{\footnotesize{Anzahl der Pfade}}\\ \textcolor{red}{\footnotesize{mit $k$ Treffern}}}} \underbrace{p^k}_{\shortstack{\textcolor{green}{\footnotesize{Treffer-}}\\ \textcolor{green}{\footnotesize{wahrscheinlichkeit}}}} \cdot
 \underbrace{(1 - p)^{n - k}}_{\shortstack{\footnotesize{\textcolor{blue}{Nieten-}}\\ \footnotesize{\textcolor{blue}{wahrscheinlichkeit}}}}$\\
-    \item Mindestens ein Treffer\\ $P_p^n(X\geq 1) = 1- P_p^n(X=0) =1-q^n$\\
+    \item Mindestens ein Treffer\\ $P_p^n(X\geq 1) = 1- P_p^n(X=0) = 1- \binom{n}{0}\cdot p^0 \cdot q^n = 1-q^n$\\
     \item Anwendung der Wahrscheinlichkeiten $\longrightarrow$ 3m$-$ Aufgaben\\
 \begin{enumerate}
     \item Mindest-Trefferwahrscheinlichkeit $p$ bei gegebenem $n$
@@ -1230,7 +1230,8 @@ Wahrscheinlichkeitsverteilung dieser Zufallsgröße \\$P(X = k) = \dfrac{\binom{
             P^n_{0,6}(X\geq 1) &\geq 0,999\\
             1-P^n_{0,6}(X=0)&\geq 0,999\\
             1-(0,4)^n &\geq 0,999\\
-           n\geq \frac{\ln{(0,001)}}{\ln{(0,4)}}
+            (0,4)^n &\leq 0,001\\
+           n &\geq \frac{\ln{(0,001)}}{\ln{(0,4)}}
         \end{split}
     \end{equation*}
 \end{enumerate}
