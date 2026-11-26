@@ -36,17 +36,22 @@
   \endgroup
 }
 
-% Karofeld für eigene Notizen nach jedem Unterabschnitt.
-% Abschalten in der Hauptdatei vor \input{inhalt}: \notizfelderfalse
-% Höhe in cm ändern: \renewcommand{\notizfeldhoehe}{3}
-\newif\ifnotizfelder
-\notizfeldertrue
-\newcommand{\notizfeldhoehe}{2}
-\newcommand{\notizfeld}{%
-  \ifnotizfelder
-    \par\smallskip\noindent{\footnotesize Notizen:}\par\nopagebreak\noindent
-    \begin{tikzpicture}
-      \draw[step=0.5cm,color=gray!70] (0,0) grid (9.5cm,\notizfeldhoehe cm);
-    \end{tikzpicture}\par\smallskip
-  \fi
+
+% Karos für eigene Notizen am Kapitelende: Überschrift, dann Karos bis zum
+% Seitenende (laufende Spalte und ggf. rechte Spalte), danach neue Seite.
+\newcommand{\karozeile}{\vbox to 0.5cm{\vss\hbox{\begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle (9.5cm,0.5cm);
+  \draw[step=0.5cm,color=gray] (0,0) grid (9.5cm,0.5cm);
+\end{tikzpicture}}}}
+% eine ganze Spalte Karos
+\newcommand{\karospalte}{\null\leaders\karozeile\vskip 0pt plus 1fill\newpage}
+\makeatletter
+\newcommand{\notizenbisseitenende}{%
+  % Spaltenumbruch, falls weniger als 4 cm Platz bleiben
+  \par\ifdim\dimexpr\pagegoal-\pagetotal\relax<4cm\newpage\fi
+  \subsection{Platz für eigene Notizen:}\par
+  \leaders\karozeile\vskip 0pt plus 1fill
+  \if@firstcolumn\newpage\null\leaders\karozeile\vskip 0pt plus 1fill\fi
+  \clearpage
 }
+\makeatother
