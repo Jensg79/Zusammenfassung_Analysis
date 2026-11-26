@@ -35,3 +35,18 @@
     \end{tikzpicture}
   \endgroup
 }
+
+% Karofeld für eigene Notizen nach jedem Unterabschnitt.
+% Abschalten in der Hauptdatei vor \input{inhalt}: \notizfelderfalse
+% Höhe in cm ändern: \renewcommand{\notizfeldhoehe}{3}
+\newif\ifnotizfelder
+\notizfeldertrue
+\newcommand{\notizfeldhoehe}{2}
+\newcommand{\notizfeld}{%
+  \ifnotizfelder
+    \par\smallskip\noindent{\footnotesize Notizen:}\par\nopagebreak\noindent
+    \begin{tikzpicture}
+      \draw[step=0.5cm,color=gray!70] (0,0) grid (9.5cm,\notizfeldhoehe cm);
+    \end{tikzpicture}\par\smallskip
+  \fi
+}
