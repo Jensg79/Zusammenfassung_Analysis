@@ -31,3 +31,8 @@
 }
 ```
 ### ToDo funktioniert, allerdings nur in der inline Variante nutzbar da kein Platz am Rand des Dokuments
+
+### Dateistruktur
+- `inhalt.tex`: gemeinsamer Inhalt (Analysis, Geometrie, Stochastik). **Korrekturen nur hier.**
+- `praeambel.tex`: gemeinsame Präambel
+- `Spickzettel.tex`, `Spickzettel_mit_Hypothesentest.tex` (zusätzliche Karoseiten), `Digital.tex` (mit Deckblatt): schlanke Hauptdateien, binden beides per `\input` ein
