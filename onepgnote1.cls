@@ -3,7 +3,7 @@
 
 %---------------------------------- ID part -----------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{onepgnote}[v0.9 All functions work but mostly not configurable.
+\ProvidesClass{onepgnote1}[v0.9 All functions work but mostly not configurable.
 On that I will work later.]
 
 %---------------------------------- Declare options -----------------------------
