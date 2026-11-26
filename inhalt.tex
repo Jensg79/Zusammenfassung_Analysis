@@ -580,7 +580,7 @@ Bei der Kurvendiskussion werden Eigenschaften des Graphen $G_f$ einer Funktion $
 \begin{enumerate}
 \item Dreieck $\longrightarrow A_{\triangle} = \frac{1}{2} \cdot g\cdot h$\\
 \item Parallelogramm $\longrightarrow A_{P} = g\cdot h$\\
-\item Trapez $\longrightarrow A_{T} = \frac{1}{2} \cdot (a+c)\cdot h$ hierbei sind $a$ und $c$ die Längen der Parallelen \\
+\item Trapez $\longrightarrow A_{T} = \frac{1}{2} \cdot (a+c)\cdot h$ hierbei sind $a$ und $c$ die Längen der parallelen Seiten \\
 \item Drachenviereck $\longrightarrow A_{\text{Drache}} = \frac{1}{2} \cdot e\cdot f$ hierbei sind $e$ und $f$ die Längen der Diagonalen \\
 \item  Kreis  $\longrightarrow A_{K} = \pi \cdot r^2$ und $U_{\text{K}} = 2\cdot \pi \cdot r$ hierbei ist $r$ der Radius des Kreises
 \end{enumerate}
@@ -595,25 +595,25 @@ Bei der Kurvendiskussion werden Eigenschaften des Graphen $G_f$ einer Funktion $
 \end{itemize}
 \subsection{Definition von Vektoren}
 \begin{itemize}
-    \item Vektoren sind Pfeile im zwei - bzw. dreidimensionalen Raum
-    \item Jeder Vektor ist ein Repräsentant unendlich vieler, gleich langer, gleich gerichteter und paralleler Pfeile
+    \item Ein Vektor ist die Menge aller gleich langen, parallelen und gleich gerichteten Pfeile in der Ebene bzw. im Raum.
+    \item Jeder dieser Pfeile ist ein \textcolor{red}{Repräsentant} des Vektors.
     \item Vektoren werden häufig durch kleine Buchstaben und einem Pfeil darüber gekennzeichnet $\vv{a}$
     \item Verläuft ein Repräsentant eines Vektors von einem Punkt z.B. $P$ zu einem zweiten Punkt z.B. $Q$, so bezeichnet man alle Repräsentanten mit $\vv{PQ}$.
     \item Werden mehrere Vektoren addiert so werden die jeweiligen Repräsentanten aneinandergereiht und das Ergebnis nennt man dann Vektorkette.
     \item Ein Vektor im 2- bzw. 3-dim. Raum wird in der Spaltenschreibweise durch 2 bzw. 3 Koordinaten beschrieben $\vv{a}= \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix}$
-    \item Der Vektor \textcolor{red}{ $\vv{0A} = \vv{A}$} bezeichnet denjenigen Vektor, der im Ursprung $0$ beginnt und im Punkt $A$ endet. Er wird als \textcolor{red}{Ortsvektor} bezeichnet.
+    \item Der Vektor \textcolor{red}{ $\vv{OA} = \vv{A}$} bezeichnet denjenigen Vektor, der im Ursprung $O$ beginnt und im Punkt $A$ endet. Er wird als \textcolor{red}{Ortsvektor} bezeichnet.
 \end{itemize}
 \subsection{Spiegelungen an den Koordinatenebenen}\\[0.25cm]
 Der Punkt $P(p_1|p_2|p_3)$ wird gespiegelt an
 \begin{itemize}
-\item $x_1x_2-$Ebene $\longrightarrow P(p_1|p_2|-p_3)$ Vorzeichen der $x_3$ Koordinaten wird geändert
-\item $x_1x_3-$Ebene $\longrightarrow P(p_1|-p_2|p_3)$ Vorzeichen der $x_2$ Koordinaten wird geändert
-\item $x_2x_3-$Ebene $\longrightarrow P(-p_1|p_2|p_3)$ Vorzeichen der $x_1$ Koordinaten wird geändert
+\item $x_1x_2$-Ebene $\longrightarrow P'(p_1|p_2|-p_3)$: Vorzeichen der $x_3$-Koordinate wird geändert
+\item $x_1x_3$-Ebene $\longrightarrow P'(p_1|-p_2|p_3)$: Vorzeichen der $x_2$-Koordinate wird geändert
+\item $x_2x_3$-Ebene $\longrightarrow P'(-p_1|p_2|p_3)$: Vorzeichen der $x_1$-Koordinate wird geändert
 \end{itemize}
 \subsection{Spiegelung am Koordinatenursprung}\\[0.25cm]
-Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt 
+Der Punkt $P(p_1|p_2|p_3)$ wird am Ursprung $O(0|0|0)$ gespiegelt 
 \begin{itemize}
-\item $P(-p_1|-p_2|-p_3)$ bei allen Koordinaten ändern sich die \\Vorzeichen
+\item $P'(-p_1|-p_2|-p_3)$: bei allen Koordinaten ändern sich die \\Vorzeichen
 \end{itemize}
 %\vspace{0.35cm}
 \subsection{Eigenschaften von Vektoren}
@@ -635,7 +635,7 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 \item skalare Multiplikation\\
 \begin{enumerate}
 \item $\lambda \cdot \vv{a} = \lambda \cdot \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} = \begin{pmatrix} \lambda \cdot a_1 \\ \lambda \cdot a_2 \\ \lambda \cdot a_3 \end{pmatrix}$\\
-\item Die skalare Multiplikation vervielfacht den Vektor durch den skalar $\lambda \in \mathds{R}$\\
+\item Die skalare Multiplikation vervielfacht den Vektor mit dem Skalar $\lambda \in \mathds{R}$\\
 \item Der Vektor $\lambda\cdot \vv{a}$ ist $| \lambda |-$ mal so lang wie der Vektor $\vv{a}$\\
 \item Für $\lambda > 0$ hat er die gleiche Richtung wie $\vv{a}$ \\
 \item Für $\lambda < 0$ hat er die entgegengesetzte Richtung wie $\vv{a}$
@@ -648,11 +648,11 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 \end{itemize}
 \subsection{Rechnungen mit Vektoren}
 \begin{itemize}
-\item Der Verbindungsvektor $\vv{PQ}$ \\ $\vv{PQ} = \vv{Q} - \vv{P} = \begin{pmatrix} q_1 \\ q_2 \\ q_3 \end{pmatrix} - \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} = \begin{pmatrix} q_1 - p_1\\ q_2 - p_2\\ q_3 - p_3\end{pmatrix}$ \\ \mynote "Spitze minus Hacke"
+\item Der Verbindungsvektor $\vv{PQ}$ \\ $\vv{PQ} = \vv{Q} - \vv{P} = \begin{pmatrix} q_1 \\ q_2 \\ q_3 \end{pmatrix} - \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} = \begin{pmatrix} q_1 - p_1\\ q_2 - p_2\\ q_3 - p_3\end{pmatrix}$ \\ \mynote „Spitze minus Fuß“
 \item Summe von Vektoren $\vv{A} +\vv{B} =  \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} + \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix} = \begin{pmatrix} a_1 + b_1\\ a_2 + b_2\\ a_3 + b_3\end{pmatrix}$
-\item Der Mittelpunkt der Strecke $\overline{AB}$  \\$ \longrightarrow \vv{M} = \frac{1}{2}\cdot \left(\vv{A} + \vv{B}\right)$ bestimmt 
+\item Der Mittelpunkt der Strecke $\overline{AB}$  \\$ \longrightarrow \vv{M} = \frac{1}{2}\cdot \left(\vv{A} + \vv{B}\right)$ 
 \item Schwerpunkt des Dreiecks $\triangle ABC $\\ $\longrightarrow \vv{S}_{\text{Dreieck}} = \frac{1}{3} \left(\vv{A} + \vv{B} +\vv{C}\right)$
-\item Schwerpunkt einer Pyramide $ABCS$ \\ $\longrightarrow \vv{S}_{\text{Pyramide}}= \frac{1}{4} \left(\vv{A} + \vv{B} +\vv{C} +\vv{S}\right)$
+\item Schwerpunkt einer dreiseitigen Pyramide $ABCS$ \\ $\longrightarrow \vv{S}_{\text{Pyramide}}= \frac{1}{4} \left(\vv{A} + \vv{B} +\vv{C} +\vv{S}\right)$
 \end{itemize}
 \subsection{Zusammenhang der Schwerpunkte}
 \scalebox{0.77}{
@@ -666,7 +666,7 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
      \hline
      Schwerpunkt eines Dreiecks &$ \vv{S}_{ABC} = \dfrac{1}{3} (\vv{A} + \vv{B} + \vv{C})$ & 2:1\\[0.2cm]
      \hline
-     Schwerpunkt einer Pyramide & $\vv{S}_{ABCS} = \dfrac{1}{4}(\vv{A} + \vv{B} +\vv{C} + \vv{S})$ & 3:1\\[0.2cm]
+     \shortstack[l]{Schwerpunkt einer\\ dreiseitigen Pyramide} & $\vv{S}_{ABCS} = \dfrac{1}{4}(\vv{A} + \vv{B} +\vv{C} + \vv{S})$ & 3:1\\[0.2cm]
      \hline
 \end{tabular}}
 
@@ -716,7 +716,7 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 \item Länge eines Vektors $\longrightarrow |\vv{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}$
 \item Skalare Multiplikation $\longrightarrow \vv{b} = \lambda \cdot \vv{a} $
 \item Skalarprodukt $\longrightarrow \vv{a}\circ \vv{b} = a_1\cdot b_1 + a_2\cdot b_2 + a_3\cdot b_3 \in \mathds{R}$
-\item Vektorprodukt mit $\vv{a} \neq \vv{0}$ und $\vv{b} \neq \vv{0}$ \\$\longrightarrow\vv{c} = \vv{a} \times \vv{b} = \begin{pmatrix} a_1 \\a_2\\a_3\end{pmatrix} \times \begin{pmatrix} b_1 \\b_2\\b_3\end{pmatrix} = \begin{pmatrix} a_2\cdot b_3 - a_3\cdot b_2 \\a_3\cdot b_1 - a_1\cdot b_3\\a_1\cdot b_2 - a_2\cdot b_1\end{pmatrix}$
+\item Vektorprodukt \\$\longrightarrow\vv{c} = \vv{a} \times \vv{b} = \begin{pmatrix} a_1 \\a_2\\a_3\end{pmatrix} \times \begin{pmatrix} b_1 \\b_2\\b_3\end{pmatrix} = \begin{pmatrix} a_2\cdot b_3 - a_3\cdot b_2 \\a_3\cdot b_1 - a_1\cdot b_3\\a_1\cdot b_2 - a_2\cdot b_1\end{pmatrix}$
 \item Spatprodukt $\longrightarrow$ Verknüpfung von Vektorprodukt und Skalarprodukt\\
 \begin{enumerate}
     \item $d = \left(\vv{a} \times\vv{b}\right) \circ\vv{c} \in \mathds{R}$
@@ -736,15 +736,15 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 \end{enumerate}
 \item Skalarprodukt\\
 \begin{enumerate}
-\item $\vv{a}\circ \vv{b} = 0  \curvearrowright \vv{a}\perp \vv{b}$\\
-\item Winkel zwischen zwei Vektoren $\vv{a}$ und $\vv{b}$\\ $\longrightarrow \cos{(\varphi)} = \frac{\vv{a} \circ \vv{b}}{|\vv{a}| \cdot |\vv{b}|} \curvearrowright \varphi = \cos^{-1}{\left(\frac{\vv{a} \circ \vv{b}}{|\vv{a}| \cdot |\vv{b}|}\right)} $
+\item Für $\vv{a}, \vv{b} \neq \vv{0}$ gilt: $\vv{a}\circ \vv{b} = 0 \Leftrightarrow \vv{a}\perp \vv{b}$\\
+\item Winkel zwischen zwei Vektoren $\vv{a}$ und $\vv{b}$\\ $\longrightarrow \cos{(\varphi)} = \frac{\vv{a} \circ \vv{b}}{|\vv{a}| \cdot |\vv{b}|} \curvearrowright \varphi = \cos^{-1}{\left(\frac{\vv{a} \circ \vv{b}}{|\vv{a}| \cdot |\vv{b}|}\right)}$ mit $0^\circ \leq \varphi \leq 180^\circ$
 \end{enumerate}
 \item Vektorprodukt\\
 \begin{enumerate}
 \item $\vv{a} \times \vv{b} = \vv{c}$\\
 \item $\vv{a} \perp \vv{c}$ und $\vv{b} \perp \vv{c}$ \\
-\item Flächeninhalt $\triangle ABC \longrightarrow A_{\text{Dreieck}} = \frac{1}{2} \cdot | \vv{a}\times \vv{b}|$\\
-\item Flächeninhalt Parallelogramm $\longrightarrow A_{\text{P}} = |\vv{a} \times \vv{b}|$
+\item Flächeninhalt Dreieck $ABC \longrightarrow A_{\text{Dreieck}} = \frac{1}{2} \cdot | \vv{AB}\times \vv{AC}|$\\
+\item Flächeninhalt Parallelogramm $ABCD \longrightarrow A_{\text{P}} = |\vv{AB} \times \vv{AD}|$
 \end{enumerate}
 \item Spatprodukt $\longrightarrow$ bestimmt ein Volumen\\
 \begin{enumerate}
@@ -793,7 +793,7 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 
  \end{scope}
 \end{tikzpicture}}\\
-    \item Volumen einer dreiseitigen Pyramide\\ $ \longrightarrow V_{\text{Pyramide}}= |\frac{1}{6}\cdot \left(\vv{AB} \times \vv{AC} \right)\circ\vv{AS}| $\\
+    \item Volumen einer dreiseitigen Pyramide\\ $ \longrightarrow V_{\text{Pyramide}}= \frac{1}{6}\cdot \left|\left(\vv{AB} \times \vv{AC} \right)\circ\vv{AS}\right| $\\ Pyramide mit Parallelogramm $ABCD$ als Grundfläche: $V = \frac{1}{3}\cdot \left|\left(\vv{AB} \times \vv{AD} \right)\circ\vv{AS}\right|$\\
     \scalebox{0.9}{%
 \begin{tikzpicture}
  \begin{scope}[
@@ -815,9 +815,9 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
   \draw[] (C) -- (A) -- (S) -- cycle;
 
   % Vektoren einzeichnen
-  \draw[->,blue, very thick] (A) -- (B) node[sloped,midway, below] {$\vec{AB}$};
-  \draw[->,blue, very thick] (A) -- (C) node[sloped,very near end, above] {$\vec{AC}$};
-  \draw[->,blue, very thick] (A) -- (S) node[sloped,midway, above, thick] {$\vec{AS}$};
+  \draw[->,blue, very thick] (A) -- (B) node[sloped,midway, below] {$\vv{AB}$};
+  \draw[->,blue, very thick] (A) -- (C) node[sloped,very near end, above] {$\vv{AC}$};
+  \draw[->,blue, very thick] (A) -- (S) node[sloped,midway, above, thick] {$\vv{AS}$};
 
   % Punkte beschriften
   \draw[red] (A) node[below left] {A};
@@ -830,7 +830,7 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 }
 \end{enumerate}
 \end{itemize}
-\subsection{Kugelgleichung}
+\subsection{Kugelgleichung (über den LehrplanPLUS 12 hinaus)}
 \begin{itemize}
 \item Kugel um den Ursprung mit Radius $r$\\$\longrightarrow \left(x_1\right)^2 +\left(x_2 \right)^2+\left(x_3 \right)^2 = r^2$ 
 \item  Kugel um $M(m_1|m_2|m_3)$ mit Radius $r$\\$ \longrightarrow \left(x_1 -m_1\right)^2 +\left(x_2 -m_2\right)^2+\left(x_3 -m_3\right)^2 = r^2 $  
@@ -841,13 +841,13 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 \subsection{Ereignisalgebra}
 \begin{itemize}
     \item Ein \textcolor{red}{Ereignis} A ist eine Teilmenge des \textcolor{red}{Ergebnisraums} $\Omega$
-    \item Ein Ereigni A \textcolor{red}{tritt ein}, wenn das \textcolor{red}{Versuchsergebnis} $\omega$ in A enthalten ist, es gilt also $\omega \in A$
-    \item Alle Elemente von $\Omega$ sie nicht zum Ereignis A gehören, fasst man unter dem Namen \textcolor{red}{Gegenereignis} $\overline{A}$ zusammen, es gilt $\overline{A}= \Omega\setminus A$
+    \item Ein Ereignis A \textcolor{red}{tritt ein}, wenn das \textcolor{red}{Versuchsergebnis} $\omega$ in A enthalten ist, es gilt also $\omega \in A$
+    \item Alle Elemente von $\Omega$, die nicht zum Ereignis A gehören, fasst man unter dem Namen \textcolor{red}{Gegenereignis} $\overline{A}$ zusammen, es gilt $\overline{A}= \Omega\setminus A$
     \item Zwei Ereignisse A und B heißen \textcolor{red}{unvereinbar}, wenn gilt \\$A \cap B = \{ \hspace{0.15cm}\}$.
 \end{itemize}
 \subsection{Venn-Diagramme}
 \begin{itemize}
-    \item Gegenereignis $\bar{A}$: "nicht A", Ereignis A tritt nicht ein\\
+    \item Gegenereignis $\bar{A}$: „nicht A“, Ereignis A tritt nicht ein\\
     \scalebox{0.8}{\begin{tikzpicture}
 \draw[orange, fill=orange!40] (0,0) rectangle (2.5,2.5);
 \begin{scope}
@@ -859,7 +859,7 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 \node at (1.25,1.25) {A};
 \node at (2,0.3) {$\bar{A}$};
 \end{tikzpicture}}
-\item Vereinigungsmenge $A \cup B$: "A oder B",  Mindestens eines der beiden Ereignisse tritt ein \\ \scalebox{0.8}{\begin{tikzpicture}
+\item Vereinigungsmenge $A \cup B$: „A oder B“,  Mindestens eines der beiden Ereignisse tritt ein \\ \scalebox{0.8}{\begin{tikzpicture}
 \draw (0,0) rectangle (2.5,2.5);
 \fill[orange!40] (0.9,1.25) circle (0.8);
 \fill[orange!40] (1.6,1.25) circle (0.5);
@@ -869,7 +869,7 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 \node at (0.5,1.25) {A};
 \node at (1.9,1.25) {B};
 \end{tikzpicture}}
-\item Schnittmenge $A \cap B$:  "A und B", Beide Ereignisse treten ein \\ 
+\item Schnittmenge $A \cap B$:  „A und B“, Beide Ereignisse treten ein \\ 
 \scalebox{0.8}{\begin{tikzpicture}
 \draw (0,0) rectangle (2.5,2.5);
 \begin{scope}
@@ -883,7 +883,7 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 \node at (2.1,1.25) {B};
 \node at (1.25,1.25) {\footnotesize{$A\cap B$}};
 \end{tikzpicture}}
-\item "A und nicht B" $A \cap \overline{B}$: Es tritt genau das Ereignis A ein\\
+\item „A und nicht B“ $A \cap \overline{B}$: A tritt ein, B aber nicht\\
 \scalebox{0.8}{\begin{tikzpicture}
 \draw (0,0) rectangle (2.5,2.5);
 \fill[orange!40] (0.9,1.25) circle (0.8);
@@ -898,7 +898,7 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 \node at (1.9,1.25) {B};
 \end{tikzpicture}}
 
-\item "nicht A und nicht B" $\bar{A} \cap \bar{B} = \overline{A\cup B}$: Weder A noch B tritt ein\\ \scalebox{0.8}{\begin{tikzpicture}
+\item „nicht A und nicht B“ $\bar{A} \cap \bar{B} = \overline{A\cup B}$: Weder A noch B tritt ein\\ \scalebox{0.8}{\begin{tikzpicture}
 \draw[orange, fill=orange!40] (0,0) rectangle (2.5,2.5);
 \begin{scope}
     \clip (0,0) rectangle (2.5,2.5);
@@ -911,7 +911,7 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
 \node at (0.5,1.25) {A};
 \node at (1.9,1.25) {B};
 \end{tikzpicture}}
-\item "nicht A oder nicht B" $\bar{A} \cup \overline{B} = \overline{A \cap B}$: Höchstens eines der Ereignisse tritt ein \\ 
+\item „nicht A oder nicht B“ $\bar{A} \cup \overline{B} = \overline{A \cap B}$: Höchstens eines der Ereignisse tritt ein \\ 
 \scalebox{0.8}{\begin{tikzpicture}
 % Rechteck als Hintergrund orange
 \fill[orange!40] (0,0) rectangle (2.5,2.5);
@@ -940,9 +940,9 @@ Der Punkt $P(p_1|p_2|p_3)$ wird am Punkt $P(0|0|0)$ gespiegelt
     \item Alle Ergebnisse eines Zufallsexperiments sind gleich wahrscheinlich
     \item Beispiel:
     \begin{enumerate}
-        \item drehen eines Glücksrads mit gleich großen Sektoren
-        \item "normaler" Würfel
-        \item Wurf mit einer "normalen" Münze
+        \item Drehen eines Glücksrads mit gleich großen Sektoren
+        \item „normaler“ Würfel
+        \item Wurf mit einer „normalen“ Münze
     \end{enumerate}
     \item Die Wahrscheinlichkeit eines Ereignisses A ist gleich der Anzahl der Elemente von A dividiert durch die Anzahl der Elemente von $\Omega$
     \item $P(A) = \frac{|A|}{|\Omega |} = \frac{\text{Anzahl der günstigen Ergebnisse}}{\text{Anzahl der möglichen Ergebnisse}}$
@@ -954,7 +954,8 @@ Eine Funktion P, die jedem Ereignis $A$ eine reelle Zahl $P(A)$ zuordnet, heißt
 \begin{itemize}
     \item Axiom I: $P(A) \geq 0$
     \item Axiom II: $P(\Omega) = 1$ 
-    \item Axiom III: $A\cap B = \{ \hspace{0.15cm} \} \Rightarrow P(A\cup B) = P(A) + P(B)$  wenn die Schnittmenge zweier Ereignisse leer ist, dann gilt für die Wahrscheinlichkeit der Vereinigung zweier Ereignisse \\$P(A\cup B) = P(A) + P(B)$ 
+    \item Axiom III: $A\cap B = \{ \hspace{0.15cm} \} \Rightarrow P(A\cup B) = P(A) + P(B)$, d.\,h. für unvereinbare Ereignisse addieren sich die Wahrscheinlichkeiten.
+    \item Vergleich: Beim Laplace-Ansatz sind alle Ergebnisse gleich wahrscheinlich. Beim frequentistischen Ansatz schätzt man $P(A)$ durch die relative Häufigkeit, die sich bei vielen Wiederholungen stabilisiert (empirisches Gesetz der großen Zahlen). Subjektive Wahrscheinlichkeiten beruhen auf persönlicher Einschätzung.
 \end{itemize}
 \subsubsection{Eigenschaften}
 \begin{itemize}
@@ -965,7 +966,7 @@ Eine Funktion P, die jedem Ereignis $A$ eine reelle Zahl $P(A)$ zuordnet, heißt
     \item $P(A \cup B) = P(A) + P(B) - P(A\cap B)$
 \end{itemize}
 \subsection{Bedingte Wahrscheinlichkeit}\\
-Ist das Ereignis A eingetreten, dann ist die \textcolor{red}{bedingte Wahrscheinlichkeit} für das Eintreten eines Ereignisses B gleich \\$P_A(B) = \dfrac{P(A \cap B)}{P(A)}$. Folgt aus der Anwendung der Pfadregeln.\\
+Für $P(A) > 0$ heißt \\$P_A(B) = \dfrac{P(A \cap B)}{P(A)}$ die \textcolor{red}{bedingte Wahrscheinlichkeit} von B unter der Bedingung A (Wahrscheinlichkeit von B, wenn A schon eingetreten ist).\\
 \scalebox{0.65}{
 % allgemeines Layout des Baums
 \tikzstyle{level 1}=[level distance=2.5cm, sibling distance=5cm]
@@ -1018,18 +1019,18 @@ Ist das Ereignis A eingetreten, dann ist die \textcolor{red}{bedingte Wahrschein
 \end{tikzpicture}
 }
 
-Nach der ersten Pfadregel berechnet sich die Wahrscheinlichkeit $P(A\cap B)$ durch das Produkt der einzelnen Pfadwahrscheinlichkeiten. Es gilt damit also $P(A\cap B) = P(A) \cdot P_{A}(B)$ und daraus folgt die Beziehung: $P_{A}(B) = \dfrac{P(A \cap B)}{P(A)}$
+Aus der Definition folgt die \textcolor{red}{1. Pfadregel}: Die Wahrscheinlichkeit $P(A\cap B)$ ist das Produkt der Wahrscheinlichkeiten entlang des Pfades, $P(A\cap B) = P(A) \cdot P_{A}(B)$. \textcolor{red}{2. Pfadregel}: Die Wahrscheinlichkeit eines Ereignisses ist die Summe der Wahrscheinlichkeiten aller zugehörigen Pfade, z.\,B. $P(B) = P(A\cap B) + P(\bar{A}\cap B)$.
 \subsubsection{Stochastische Unabhängigkeit}\\
 Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, wenn $P(A \cap B) = P(A)\cdot P(B)$ gilt. Andernfalls nennt man diese \textcolor{red}{stochastisch abhängig}.
 \subsection{Kombinatorik}\\
 \begin{enumerate}
     \item Permutation als  Anordnung von $n$ Objekten in einer bestimmten Reihenfolge $\longrightarrow n! = n\cdot ( n-1) \cdot (n-2)\cdot \ldots \cdot 3\cdot  2\cdot 1$\\
-    \item Unterscheidungsmöglichkeiten in einem Urnenexperimentes: Man zieht aus einer Menge mit $n$ Elementen $k$-Elemente heraus\\
+    \item Anzahl der Möglichkeiten bei einem Urnenexperiment: Man zieht aus einer Menge mit $n$ Elementen $k$ Elemente heraus\\
     \begin{tabular}{|c||c|c|}
     \hline
          &  Mit Reihenfolge & Ohne Reihenfolge\\
            \hline\hline
-     Mit Zurücklegen   & $n^k$ & $\binom{n+k-1}{k}$\\
+     Mit Zurücklegen   & $n^k$ & $\binom{n+k-1}{k}$\footnote{über den LehrplanPLUS 12 hinaus}\\
      \hline
      Ohne Zurücklegen & $\frac{n!}{\left(n-k\right)!}$& $\binom{n}{k} = \frac{n!}{k!\left(n-k\right)!}$\\
      \hline
@@ -1047,7 +1048,7 @@ Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, w
 \begin{itemize}
     \item Eine Funktion $X$, die jedem Ergebnis $\omega$ eines Ergebnisraumes $\Omega$ eine reelle Zahl $x$ zuordnet, heißt \textcolor{red}{Zufallsgröße\footnote{Zufallsgröße $\longrightarrow$ ZG}} X.
     \item Jeder Wert $x$ einer ZG $X$ tritt mit einer bestimmten Wahrscheinlichkeit $P(X=x)$ auf. Die Funktion, die jedem Wert $x$ einer ZG $X$ die Wahrscheinlichkeit $P(X=x)$ zuordnet, heißt \textcolor{red}{Wahrscheinlichkeitsverteilung} der ZG $X$.
-     \item Als Beispiel ist hier $P(X=4) = 0,2$ dargestellt.
+     \item Als Beispiel ist hier $P(X=4) = 0{,}2$ dargestellt.
    \begin{tikzpicture}[>=Stealth, scale=0.8]
 
 % Ergebnisraum Omega (kompakter)
@@ -1070,17 +1071,17 @@ Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, w
 \draw[->] (-2.2,3) -- (5,3) node[right] {$x$};
 \foreach \x in {-2,-1,0,1,2,3,4}
   \draw (\x,2.9) -- (\x,3.1) node[below=2pt] {\small \x};
-\node[blue] at (4.8,3.4) {Wertemenge $W$};
+\node[blue] at (4.6,3.75) {Wertemenge $W$};
 
 % Grüner Pfeil: Zufallsgröße X
 \draw[->, thick, green!60!black] (0.5,4.2) to[bend left=30] (4,3.1);
-\node[green!50!black] at (1.5,3.4) {Zufallsgröße $X$};
+\node[green!50!black] at (1.3,3.55) {Zufallsgröße $X$};
 
 % P(X = x)-Achse
 \draw[->] (-0.1,1.5) -- (3.6,1.5) node[anchor=west] {$P(X = x)$};
 
 % Tick-Marken und Beschriftungen
-\foreach \i/\label in {0/0, 1/0.2,  3/0.6, 5/1} {
+\foreach \i/\label in {0/0, 1/{0,2},  3/{0,6}, 5/1} {
   \draw (\i*0.6 + 0.3,1.5) -- ++(0,-0.1); % Markierung
   \node at (\i*0.6 + 0.3,1.2) {\label};   % Beschriftung
 }
@@ -1095,31 +1096,31 @@ Zwei Ereignisse $A$ und $B$ heißen \textcolor{red}{stochastisch unabhängig}, w
 \end{itemize}
 \subsubsection{Erwartungswert und Varianz}
 \begin{itemize}
-    \item Eine ZG nimmt die Werte $x_1, x_2,\ldots , x_n$ mit den Wahrscheinlichkeiten $P(X=x_1), P(X=x_2), \ldots, P(X=x_n)$ an. Dann heißt der zu erwartende Mittelwert\\ $ \mu =E(X) = \sum\limits_{i=1}^n x_i\cdot P(X=x_i) \\= x_1\cdot P(X=x_1) + x_2\cdot P(X=x_2) +\ldots + x_n \cdot P(X=x_n)$ \textcolor{red}{Erwartungswert} von $X$. \mynote Der Erwartungswert $\mu$ ist häufig \textcolor{red}{kein} Wert, den die ZG annimmt.
-    \item Eine ZG mit $E(X) = \mu$ nehme die Werte $x_1, x_2,\ldots , x_n$ mit den Wahrscheinlichkeiten\\ $P(X=x_1), P(X=x_2), \ldots, P(X=x_n)$ an. Dann heißt die mittlere quadratische Abweichung von $\mu$ \textcolor{red}{Varianz} von $X$: \\ $Var(X) = \sum\limits_{i=1}^n \left(x_i - \mu\right)^2 \cdot P(X = x_i)\\ = \left(x_1 - \mu\right)^2 \cdot P(X = x_1) + \ldots + \left(x_n - \mu\right)^2 \cdot P(X = x_n)$
-    \item Die Standardabweichung $\sigma$ einer ZG $X$ bestimmt sich durch $\sigma = \sqrt{Var(X)}$
+    \item Eine ZG nimmt die Werte $x_1, x_2,\ldots , x_n$ mit den Wahrscheinlichkeiten $P(X=x_1), P(X=x_2), \ldots, P(X=x_n)$ an. Dann heißt der zu erwartende Mittelwert\\ $ \mu =E(X) = \sum\limits_{i=1}^n x_i\cdot P(X=x_i) \\= x_1\cdot P(X=x_1) + x_2\cdot P(X=x_2) +\ldots + x_n \cdot P(X=x_n)$ \textcolor{red}{Erwartungswert} von $X$. \mynote Der Erwartungswert $\mu$ muss \textcolor{red}{kein} Wert sein, den die ZG annimmt.
+    \item Eine ZG mit $E(X) = \mu$ nehme die Werte $x_1, x_2,\ldots , x_n$ mit den Wahrscheinlichkeiten\\ $P(X=x_1), P(X=x_2), \ldots, P(X=x_n)$ an. Dann heißt die mittlere quadratische Abweichung von $\mu$ \textcolor{red}{Varianz} von $X$: \\ $\operatorname{Var}(X) = \sum\limits_{i=1}^n \left(x_i - \mu\right)^2 \cdot P(X = x_i)\\ = \left(x_1 - \mu\right)^2 \cdot P(X = x_1) + \ldots + \left(x_n - \mu\right)^2 \cdot P(X = x_n)$
+    \item Die Standardabweichung $\sigma$ einer ZG $X$ bestimmt sich durch $\sigma = \sqrt{\operatorname{Var}(X)}$
 \end{itemize}
 
 \subsection{Hypergeometrische Verteilung}
 \begin{itemize}
-    \item Als Anwendung der Kombinatorik mit den Einschränkungen \textcolor{red}{ziehen ohne zurücklegen} und \textcolor{red}{ohne Beachtung der Reihenfolge}
+    \item Als Anwendung der Kombinatorik mit den Einschränkungen \textcolor{red}{Ziehen ohne Zurücklegen} und \textcolor{red}{ohne Beachtung der Reihenfolge}
     \item Es gibt $\binom{n}{k}$ Möglichkeiten $k$ Objekte ohne Berücksichtigung der Reihenfolge aus $n$ verschiedenen Objekten auszuwählen.
     \item Aus einer Urne mit $N$ Kugeln, wovon $S$ schwarz sind, werden $n$ Kugeln ohne Zurücklegen gezogen. Die ZG $X$ beschreibt die Anzahl der gezogenen schwarzen Kugeln.\\
-Wahrscheinlichkeitsverteilung dieser Zufallsgröße \\$P(X = k) = \dfrac{\binom{S}{k}\cdot \binom{N-S}{n-k}}{\binom{N}{n}}$ mit $k\leq n$ und $k\leq S$
+Wahrscheinlichkeitsverteilung dieser Zufallsgröße \\$P(X = k) = \dfrac{\binom{S}{k}\cdot \binom{N-S}{n-k}}{\binom{N}{n}}$ mit $k\leq n$, $k\leq S$ und $n-k \leq N-S$
 \item Beispiel: 
 \begin{enumerate}
-\item $N=200$ , $S = 10$, $n=180$ und $k=9$\\
-    \item $P(X=9)= \dfrac {\binom{10}{9} \cdot \binom {190}{171}}{\binom{200}{180}} \approx 39,74\%$
+\item In einer Lieferung von $N=20$ Bauteilen sind $S=4$ defekt. Es werden $n=5$ Teile ohne Zurücklegen geprüft. Wahrscheinlichkeit für genau $k=1$ defektes Teil:\\
+    \item $P(X=1)= \dfrac {\binom{4}{1} \cdot \binom {16}{4}}{\binom{20}{5}} = \dfrac{4\cdot 1820}{15504} \approx 46{,}96\,\%$
 \end{enumerate}
 \end{itemize}
 \subsection{Binomialverteilung}
 \subsubsection{Bernoulli-Kette}
 \begin{itemize}
-    \item Ein ZG mit nur zwei möglichen Ergebnissen nennt man Bernoulli-Experiment $ \longrightarrow$ Treffer "1" bzw. Niete "0"
+    \item Ein Zufallsexperiment mit nur zwei möglichen Ergebnissen nennt man Bernoulli-Experiment $ \longrightarrow$ Treffer „1“ bzw. Niete „0“
     \item Trefferwahrscheinlichkeit $p$
     \item Nietenwahrscheinlichkeit $q = 1-p$
     \item Wird ein Bernoulli-Experiment $n$-mal unabhängig durchgeführt, spricht man von einer \textcolor{red}{Bernoulli-Kette} der \textcolor{red}{Länge n}. 
-    \item Die Trefferwahrscheinlichkeit $p$ bleibt dabei konstant \\$\longrightarrow$ ziehen ohne zurücklegen ohne Beachtung der Reihenfolge
+    \item Die Trefferwahrscheinlichkeit $p$ bleibt dabei konstant \\$\longrightarrow$ Urnenmodell: Ziehen \textcolor{red}{mit} Zurücklegen
     \item Beispiel\\
     % allgemeines Layout des Baums
 \tikzstyle{level 1}=[level distance=2.5cm, sibling distance=5cm]
@@ -1173,58 +1174,83 @@ Wahrscheinlichkeitsverteilung dieser Zufallsgröße \\$P(X = k) = \dfrac{\binom{
 \end{itemize}
 \subsubsection{Wahrscheinlichkeiten}
 \begin{itemize}
-    \item Wahrscheinlichkeit eines Ergebnisses $\omega$ in einer Bernoulli-Kette $\longrightarrow$ Wahrscheinlichkeit entlang eines Astes\\ $P_p^n(\omega) = \underbrace{p^k}_{\shortstack{\textcolor{red}{\footnotesize{Treffer-}}\\ \textcolor{red}{\footnotesize{wahrscheinlichkeit}}}} \cdot
+    \item Wahrscheinlichkeit eines Ergebnisses $\omega$ mit $k$ Treffern in einer Bernoulli-Kette der Länge $n$ $\longrightarrow$ Wahrscheinlichkeit entlang eines Pfades\\ $P_p^n(\omega) = \underbrace{p^k}_{\shortstack{\textcolor{red}{\footnotesize{Treffer-}}\\ \textcolor{red}{\footnotesize{wahrscheinlichkeit}}}} \cdot
 \underbrace{(1 - p)^{n - k}}_{\shortstack{\footnotesize{\textcolor{red}{Nieten-}}\\ \footnotesize{\textcolor{red}{wahrscheinlichkeit}}}}$\\
-    \item Wahrscheinlichkeit für \textcolor{red}{genau k} Treffer beträgt\\ $P_p^n(X = k) = \underbrace{\binom{n}{k}}_{\shortstack{\textcolor{red}{\footnotesize{Anzahl der Pfade}}\\ \textcolor{red}{\footnotesize{mit $k$ Treffern}}}} \underbrace{p^k}_{\shortstack{\textcolor{green}{\footnotesize{Treffer-}}\\ \textcolor{green}{\footnotesize{wahrscheinlichkeit}}}} \cdot
-\underbrace{(1 - p)^{n - k}}_{\shortstack{\footnotesize{\textcolor{blue}{Nieten-}}\\ \footnotesize{\textcolor{blue}{wahrscheinlichkeit}}}}$\\
+    \item Wahrscheinlichkeit für \textcolor{red}{genau k} Treffer beträgt\\ \scalebox{0.94}{$P_p^n(X = k) = \underbrace{\binom{n}{k}}_{\shortstack{\textcolor{red}{\footnotesize{Anzahl der Pfade}}\\ \textcolor{red}{\footnotesize{mit $k$ Treffern}}}} \underbrace{p^k}_{\shortstack{\textcolor{green}{\footnotesize{Treffer-}}\\ \textcolor{green}{\footnotesize{wahrscheinlichkeit}}}} \cdot
+\underbrace{(1 - p)^{n - k}}_{\shortstack{\footnotesize{\textcolor{blue}{Nieten-}}\\ \footnotesize{\textcolor{blue}{wahrscheinlichkeit}}}}$}\\
     \item Mindestens ein Treffer\\ $P_p^n(X\geq 1) = 1- P_p^n(X=0) = 1- \binom{n}{0}\cdot p^0 \cdot q^n = 1-q^n$\\
-    \item Anwendung der Wahrscheinlichkeiten $\longrightarrow$ 3m$-$ Aufgaben\\
+    \item Anwendung: 3m-Aufgaben (mindestens -- mindestens -- mindestens)\\
 \begin{enumerate}
     \item Mindest-Trefferwahrscheinlichkeit $p$ bei gegebenem $n$
     \begin{equation*}
         \begin{split}
-            P^5_p(X\geq 1) &\geq 0,9\\
-            1-P^5_p(X=0)&\geq 0,9\\
-            1-(1-p)^5 &\geq 0,9\\
-            p\geq \sqrt[5]{0,1}
+            P^5_p(X\geq 1) &\geq 0{,}9\\
+            1-P^5_p(X=0)&\geq 0{,}9\\
+            1-(1-p)^5 &\geq 0{,}9\\
+            (1-p)^5 &\leq 0{,}1\\
+            1-p &\leq \sqrt[5]{0{,}1}\\
+            p &\geq 1-\sqrt[5]{0{,}1} \approx 0{,}369
         \end{split}
     \end{equation*}
     \item Mindest-Anzahl an Versuchen $n$ bei gegebenem $p$
     \begin{equation*}
         \begin{split}
-            P^n_{0,6}(X\geq 1) &\geq 0,999\\
-            1-P^n_{0,6}(X=0)&\geq 0,999\\
-            1-(0,4)^n &\geq 0,999\\
-            (0,4)^n &\leq 0,001\\
-           n &\geq \frac{\ln{(0,001)}}{\ln{(0,4)}}
+            P^n_{0{,}6}(X\geq 1) &\geq 0{,}999\\
+            1-P^n_{0{,}6}(X=0)&\geq 0{,}999\\
+            1-0{,}4^n &\geq 0{,}999\\
+            0{,}4^n &\leq 0{,}001\\
+            n\cdot\ln(0{,}4) &\leq \ln(0{,}001) \quad |:\ln(0{,}4)<0\\
+           n &\geq \frac{\ln{(0{,}001)}}{\ln{(0{,}4)}} \approx 7{,}54\\
+           &\Rightarrow \text{mindestens } 8 \text{ Versuche}
         \end{split}
     \end{equation*}
 \end{enumerate}
 \end{itemize}
 \subsubsection{Erwartungswert und Varianz}
 \begin{itemize}
-    \item Wahrscheinlichkeitsverteilung eine Binomialverteilung
+    \item Wahrscheinlichkeitsverteilung einer binomialverteilten ZG $X$
     \begin{enumerate}
-        \item $B(n,p) = P_p^n(X=k) = \binom{n}{k} \cdot p^k \cdot q^{n-k}$ mit\\ $k\in \{0, 1, \ldots, n\}$\\
-        \item kumulative Verteilung:\\ $F_p^n(k) = P_p^n(X\leq k)=\sum\limits_{i=0}^k P_p^n(X=k)\\ =\sum\limits_{i=0}^k \binom{n}{k} \cdot p^k \cdot q^{n-k}$ mit $k\in \{0, 1, \ldots, n\}$
+        \item $B(n;p;k) = P_p^n(X=k) = \binom{n}{k} \cdot p^k \cdot q^{n-k}$ mit\\ $k\in \{0, 1, \ldots, n\}$\\
+        \item kumulative Verteilung:\\ $F(n;p;k) = P_p^n(X\leq k)=\sum\limits_{i=0}^k P_p^n(X=i)\\ =\sum\limits_{i=0}^k \binom{n}{i} \cdot p^i \cdot q^{n-i}$ mit $k\in \{0, 1, \ldots, n\}$
     \end{enumerate}
     \item Erwartungswert: $E(X) = n\cdot p$
-    \item Varianz: $Var(X)= n\cdot p \cdot q$
-    \item Standardabweichung: $\sigma = \sqrt{Var(x)} = \sqrt{n\cdot p \cdot q}$
+    \item Varianz: $\operatorname{Var}(X)= n\cdot p \cdot q$
+    \item Standardabweichung: $\sigma = \sqrt{\operatorname{Var}(X)} = \sqrt{n\cdot p \cdot q}$
+    \item Einfluss der Parameter:\\
+    \begin{enumerate}
+    \item Das Histogramm hat sein Maximum in der Nähe von $\mu = n\cdot p$.\\
+    \item Je näher $p$ an $0{,}5$ liegt, desto symmetrischer ist die Verteilung.\\
+    \item Größeres $n$: breiter und flacher, da $\sigma$ wächst.
+    \end{enumerate}\\
+    \begin{tikzpicture}
+    \begin{axis}[ybar=0pt, bar width=2.2pt, width=\linewidth, height=3.6cm,
+      xmin=-0.8, xmax=20.8, ymin=0, ymax=0.24, xtick={0,2,...,20},
+      ytick={0,0.1,0.2}, yticklabels={0,{0{,}1},{0{,}2}},
+      tick label style={font=\tiny},
+      legend style={font=\tiny, at={(0.98,0.95)}, anchor=north east}]
+    \addplot[fill=blue!50, draw=blue] coordinates {(0,0.0115) (1,0.0576) (2,0.1369) (3,0.2054) (4,0.2182) (5,0.1746) (6,0.1091) (7,0.0545) (8,0.0222) (9,0.0074) (10,0.0020) (11,0.0005) (12,0.0001) (13,0) (14,0) (15,0) (16,0) (17,0) (18,0) (19,0) (20,0)};
+    \addplot[fill=red!50, draw=red] coordinates {(0,0) (1,0) (2,0.0002) (3,0.0011) (4,0.0046) (5,0.0148) (6,0.0370) (7,0.0739) (8,0.1201) (9,0.1602) (10,0.1762) (11,0.1602) (12,0.1201) (13,0.0739) (14,0.0370) (15,0.0148) (16,0.0046) (17,0.0011) (18,0.0002) (19,0) (20,0)};
+    \legend{{$n=20$; $p=0{,}2$}, {$n=20$; $p=0{,}5$}}
+    \end{axis}
+    \end{tikzpicture}
 \end{itemize}
-\newpage
 \subsection{Hypothesentest}
 \begin{itemize}
 \item Zwei sich ausschließende Hypothesen werden betrachtet\\
 \begin{enumerate}
 \item Nullhypothese $H_0$ \item Gegenhypothese $H_1$
 \end{enumerate}
+\item Einseitiger Signifikanztest mit \textcolor{red}{Signifikanzniveau} $\alpha$ (z.\,B. $5\,\%$): Die Wahrscheinlichkeit für den Fehler 1.~Art darf höchstens $\alpha$ betragen.\\
+\begin{enumerate}
+\item \textcolor{red}{rechtsseitig}: $H_0\colon p \leq p_0$, $H_1\colon p > p_0$, $K = \{k; \ldots; n\}$ mit kleinstem $k$, für das $P_{p_0}^n(X\geq k) \leq \alpha$\\
+\item \textcolor{red}{linksseitig}: $H_0\colon p \geq p_0$, $H_1\colon p < p_0$, $K = \{0; \ldots; k\}$ mit größtem $k$, für das $P_{p_0}^n(X\leq k) \leq \alpha$
+\end{enumerate}
 \item Anzahl der Treffer einer \textcolor{red}{Stichprobe} mit festgelegter Länge bildet die \textcolor{red}{Testgröße}
 \item Wertebereich der Testgröße wird in den \textcolor{red}{kritischen Bereich} K (\textcolor{red}{Ablehnungsbereich}) und den \textcolor{red}{nichtkritischen Bereich} $\bar{K}$  (\textcolor{red}{Annahmebereich}) zerlegt
 \item liegt der durch die Stichprobe gewonnene Wert der Testgröße in K, dann wird $H_0$ verworfen, ansonsten wird $H_0$ nicht verworfen (\textcolor{red}{Entscheidungsregel}). 
 
 \item Fehler beim Testen von Hypothesen\\ 
-\scalebox{0.8}{\begin{tabular}{|>{\columncolor{gray!15}}l|>{\columncolor{gray!10}}c|>{\columncolor{gray!10}}c|}
+\scalebox{0.74}{\begin{tabular}{|>{\columncolor{gray!15}}l|>{\columncolor{gray!10}}c|>{\columncolor{gray!10}}c|}
   \hline
   \rowcolor{gray!20}
   \textbf{Entscheidung} & \textbf{$H_0$ ist wahr.} & \textbf{$H_0$ ist falsch.} \\
@@ -1246,6 +1272,14 @@ des Fehlers der einen Art auf Kosten der Wahrscheinlichkeit des Fehlers der ande
 \item Durch eine Erhöhung des Stichprobenumfangs können bei einem Test die Fehler
 1. und 2. Art verringert werden. Allerdings ist eine solche Erhöhung in der Praxis auch mit erhöhten Kosten verbunden.
 \end{enumerate}
+\item Beispiel (rechtsseitig): Bisher liegt der Anteil bei $20\,\%$. Man vermutet, dass er gestiegen ist. Stichprobe $n = 50$, $\alpha = 5\,\%$.\\
+\begin{enumerate}
+\item $H_0\colon p \leq 0{,}2$; \quad $H_1\colon p > 0{,}2$; \quad Testgröße $X$: Anzahl der Treffer\\
+\item $P_{0{,}2}^{50}(X \geq k) = 1 - F(50;0{,}2;k-1) \leq 0{,}05$\\
+\item $P_{0{,}2}^{50}(X \geq 15) \approx 0{,}061 > 0{,}05$, \quad $P_{0{,}2}^{50}(X \geq 16) = 1 - 0{,}9692 \approx 0{,}031 \leq 0{,}05$\\
+\item $\Rightarrow K = \{16; \ldots; 50\}$: Bei mindestens 16 Treffern wird $H_0$ abgelehnt.
+\end{enumerate}
+\item \mynote Wird $H_0$ nicht abgelehnt, ist $H_0$ damit \textcolor{red}{nicht bewiesen}. Das Signifikanzniveau ist \textcolor{red}{nicht} die Wahrscheinlichkeit, dass $H_0$ wahr ist.
 \end{itemize}
 \subsection{Platz für eigene Notizen:}
 \kariert{Notizen:}{9.5}{15}\\
